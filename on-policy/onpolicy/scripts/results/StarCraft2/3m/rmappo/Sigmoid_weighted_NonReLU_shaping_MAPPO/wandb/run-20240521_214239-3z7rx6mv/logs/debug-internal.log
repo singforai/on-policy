@@ -1,0 +1,136 @@
+2024-05-21 21:42:39,020 INFO    StreamThr :502064 [internal.py:wandb_internal():86] W&B internal server running at pid: 502064, started at: 2024-05-21 21:42:39.019457
+2024-05-21 21:42:39,021 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: status
+2024-05-21 21:42:39,027 INFO    WriterThread:502064 [datastore.py:open_for_write():87] open: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/Sigmoid_weighted_NonReLU_shaping_MAPPO/wandb/run-20240521_214239-3z7rx6mv/run-3z7rx6mv.wandb
+2024-05-21 21:42:39,027 DEBUG   SenderThread:502064 [sender.py:send():382] send: header
+2024-05-21 21:42:39,051 DEBUG   SenderThread:502064 [sender.py:send():382] send: run
+2024-05-21 21:42:39,524 INFO    SenderThread:502064 [dir_watcher.py:__init__():211] watching files in: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/Sigmoid_weighted_NonReLU_shaping_MAPPO/wandb/run-20240521_214239-3z7rx6mv/files
+2024-05-21 21:42:39,524 INFO    SenderThread:502064 [sender.py:_start_run_threads():1136] run started: 3z7rx6mv with start time 1716295359.020346
+2024-05-21 21:42:39,534 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: check_version
+2024-05-21 21:42:39,535 DEBUG   SenderThread:502064 [sender.py:send_request():409] send_request: check_version
+2024-05-21 21:42:39,587 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: run_start
+2024-05-21 21:42:39,598 DEBUG   HandlerThread:502064 [system_info.py:__init__():27] System info init
+2024-05-21 21:42:39,598 DEBUG   HandlerThread:502064 [system_info.py:__init__():42] System info init done
+2024-05-21 21:42:39,598 INFO    HandlerThread:502064 [system_monitor.py:start():194] Starting system monitor
+2024-05-21 21:42:39,598 INFO    SystemMonitor:502064 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-21 21:42:39,599 INFO    HandlerThread:502064 [system_monitor.py:probe():214] Collecting system info
+2024-05-21 21:42:39,599 INFO    SystemMonitor:502064 [interfaces.py:start():190] Started cpu monitoring
+2024-05-21 21:42:39,600 INFO    SystemMonitor:502064 [interfaces.py:start():190] Started disk monitoring
+2024-05-21 21:42:39,600 INFO    SystemMonitor:502064 [interfaces.py:start():190] Started gpu monitoring
+2024-05-21 21:42:39,601 INFO    SystemMonitor:502064 [interfaces.py:start():190] Started memory monitoring
+2024-05-21 21:42:39,602 INFO    SystemMonitor:502064 [interfaces.py:start():190] Started network monitoring
+2024-05-21 21:42:39,615 DEBUG   HandlerThread:502064 [system_info.py:probe():151] Probing system
+2024-05-21 21:42:39,624 DEBUG   HandlerThread:502064 [system_info.py:_probe_git():136] Probing git
+2024-05-21 21:42:39,645 DEBUG   HandlerThread:502064 [system_info.py:_probe_git():144] Probing git done
+2024-05-21 21:42:39,645 DEBUG   HandlerThread:502064 [system_info.py:probe():199] Probing system done
+2024-05-21 21:42:39,645 DEBUG   HandlerThread:502064 [system_monitor.py:probe():223] {'os': 'Linux-6.5.0-35-generic-x86_64-with-glibc2.35', 'python': '3.9.18', 'heartbeatAt': '2024-05-21T12:42:39.615961', 'startedAt': '2024-05-21T12:42:39.012936', 'docker': None, 'cuda': None, 'args': ('--seed', '923', '--env_name', 'StarCraft2', '--experiment_name', 'Sigmoid_weighted_NonReLU_shaping_MAPPO', '--group_name', 'Sigmoid_weighted_NonReLU_shaping_MAPPO', '--shaping_weight_type', 'sigmoid', '--num_gpu', '0'), 'state': 'running', 'program': '/home/uosai/Desktop/on-policy/onpolicy/scripts/train/train_smac.py', 'codePathLocal': 'train_smac.py', 'codePath': 'onpolicy/scripts/train/train_smac.py', 'git': {'remote': 'https://github.com/narame7/on-policy.git', 'commit': 'a843a882a6e81ddd9b6e30e03a1d91e4076549c9'}, 'email': 'singfor7012@gmail.com', 'root': '/home/uosai/Desktop/on-policy', 'host': 'uos-desktop', 'username': 'uosai', 'executable': '/home/uosai/Desktop/miniconda3/envs/marl/bin/python', 'cpu_count': 12, 'cpu_count_logical': 24, 'cpu_freq': {'current': 4450.5711666666675, 'min': 2200.0, 'max': 3700.0}, 'cpu_freq_per_core': [{'current': 4416.696, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.693, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.67, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.702, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.565, 'min': 2200.0, 'max': 3700.0}, {'current': 4109.872, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.71, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.708, 'min': 2200.0, 'max': 3700.0}, {'current': 4436.572, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.166, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.667, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.62, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.431, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.63, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.571, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.59, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.695, 'min': 2200.0, 'max': 3700.0}, {'current': 4166.761, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.702, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.2, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.549, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.684, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.697, 'min': 2200.0, 'max': 3700.0}, {'current': 4416.704, 'min': 2200.0, 'max': 3700.0}], 'disk': {'/': {'total': 233.17998886108398, 'used': 179.24874877929688}}, 'gpu': 'NVIDIA GeForce RTX 3080', 'gpu_count': 2, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3080', 'memory_total': 10737418240}, {'name': 'NVIDIA GeForce RTX 3080', 'memory_total': 10737418240}], 'memory': {'total': 62.70906448364258}}
+2024-05-21 21:42:39,645 INFO    HandlerThread:502064 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-21 21:42:39,645 INFO    HandlerThread:502064 [system_monitor.py:probe():227] Publishing system info
+2024-05-21 21:42:39,645 DEBUG   HandlerThread:502064 [system_info.py:_save_conda():208] Saving list of conda packages installed into the current environment
+2024-05-21 21:42:40,527 INFO    Thread-12 :502064 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/Sigmoid_weighted_NonReLU_shaping_MAPPO/wandb/run-20240521_214239-3z7rx6mv/files/conda-environment.yaml
+2024-05-21 21:42:42,001 DEBUG   HandlerThread:502064 [system_info.py:_save_conda():220] Saving conda packages done
+2024-05-21 21:42:42,002 INFO    HandlerThread:502064 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-21 21:42:42,005 DEBUG   SenderThread:502064 [sender.py:send():382] send: files
+2024-05-21 21:42:42,006 INFO    SenderThread:502064 [sender.py:_save_file():1403] saving file wandb-metadata.json with policy now
+2024-05-21 21:42:42,011 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: python_packages
+2024-05-21 21:42:42,012 DEBUG   SenderThread:502064 [sender.py:send_request():409] send_request: python_packages
+2024-05-21 21:42:42,012 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-21 21:42:42,015 DEBUG   SenderThread:502064 [sender.py:send_request():409] send_request: stop_status
+2024-05-21 21:42:42,018 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-21 21:42:42,381 DEBUG   SenderThread:502064 [sender.py:send():382] send: telemetry
+2024-05-21 21:42:42,525 INFO    Thread-12 :502064 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/Sigmoid_weighted_NonReLU_shaping_MAPPO/wandb/run-20240521_214239-3z7rx6mv/files/conda-environment.yaml
+2024-05-21 21:42:42,525 INFO    Thread-12 :502064 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/Sigmoid_weighted_NonReLU_shaping_MAPPO/wandb/run-20240521_214239-3z7rx6mv/files/wandb-metadata.json
+2024-05-21 21:42:42,525 INFO    Thread-12 :502064 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/Sigmoid_weighted_NonReLU_shaping_MAPPO/wandb/run-20240521_214239-3z7rx6mv/files/requirements.txt
+2024-05-21 21:42:42,859 INFO    wandb-upload_0:502064 [upload_job.py:push():131] Uploaded file /tmp/tmp_80904s1wandb/ss3fvm1m-wandb-metadata.json
+2024-05-21 21:42:44,382 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: status_report
+2024-05-21 21:42:49,527 INFO    Thread-12 :502064 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/Sigmoid_weighted_NonReLU_shaping_MAPPO/wandb/run-20240521_214239-3z7rx6mv/files/output.log
+2024-05-21 21:42:49,630 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: status_report
+2024-05-21 21:42:51,417 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:42:51,418 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:42:51,418 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:42:51,418 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:42:51,528 INFO    Thread-12 :502064 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/Sigmoid_weighted_NonReLU_shaping_MAPPO/wandb/run-20240521_214239-3z7rx6mv/files/output.log
+2024-05-21 21:42:51,528 INFO    Thread-12 :502064 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/Sigmoid_weighted_NonReLU_shaping_MAPPO/wandb/run-20240521_214239-3z7rx6mv/files/critic.pt
+2024-05-21 21:42:51,528 INFO    Thread-12 :502064 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/Sigmoid_weighted_NonReLU_shaping_MAPPO/wandb/run-20240521_214239-3z7rx6mv/files/actor.pt
+2024-05-21 21:42:51,759 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:42:51,760 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:42:51,760 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:42:51,760 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:42:51,760 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:42:51,760 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:42:51,760 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:42:53,528 INFO    Thread-12 :502064 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/Sigmoid_weighted_NonReLU_shaping_MAPPO/wandb/run-20240521_214239-3z7rx6mv/files/output.log
+2024-05-21 21:42:54,760 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: status_report
+2024-05-21 21:42:57,013 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-21 21:42:57,013 DEBUG   SenderThread:502064 [sender.py:send_request():409] send_request: stop_status
+2024-05-21 21:42:57,016 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-21 21:42:57,715 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:42:57,716 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:42:59,530 INFO    Thread-12 :502064 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/Sigmoid_weighted_NonReLU_shaping_MAPPO/wandb/run-20240521_214239-3z7rx6mv/files/output.log
+2024-05-21 21:43:00,730 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: status_report
+2024-05-21 21:43:05,731 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: status_report
+2024-05-21 21:43:10,735 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: status_report
+2024-05-21 21:43:11,534 INFO    Thread-12 :502064 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/Sigmoid_weighted_NonReLU_shaping_MAPPO/wandb/run-20240521_214239-3z7rx6mv/files/config.yaml
+2024-05-21 21:43:12,013 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-21 21:43:12,013 DEBUG   SenderThread:502064 [sender.py:send_request():409] send_request: stop_status
+2024-05-21 21:43:12,016 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-21 21:43:16,250 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: status_report
+2024-05-21 21:43:21,251 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: status_report
+2024-05-21 21:43:24,710 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:24,711 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:24,711 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:24,711 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:24,711 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:24,712 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:24,712 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:24,712 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:24,712 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:24,712 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:24,712 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:24,712 DEBUG   SenderThread:502064 [sender.py:send():382] send: history
+2024-05-21 21:43:24,713 DEBUG   SenderThread:502064 [sender.py:send_request():409] send_request: summary_record
+2024-05-21 21:43:24,714 INFO    SenderThread:502064 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-21 21:43:24,867 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:24,868 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:25,538 INFO    Thread-12 :502064 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/Sigmoid_weighted_NonReLU_shaping_MAPPO/wandb/run-20240521_214239-3z7rx6mv/files/output.log
+2024-05-21 21:43:25,538 INFO    Thread-12 :502064 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/Sigmoid_weighted_NonReLU_shaping_MAPPO/wandb/run-20240521_214239-3z7rx6mv/files/wandb-summary.json
+2024-05-21 21:43:26,868 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: status_report
+2024-05-21 21:43:27,013 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-21 21:43:27,013 DEBUG   SenderThread:502064 [sender.py:send_request():409] send_request: stop_status
+2024-05-21 21:43:27,017 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-21 21:43:32,243 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: status_report
+2024-05-21 21:43:37,244 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: status_report
+2024-05-21 21:43:39,602 DEBUG   SystemMonitor:502064 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-21 21:43:39,603 DEBUG   SenderThread:502064 [sender.py:send():382] send: stats
+2024-05-21 21:43:42,013 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-21 21:43:42,013 DEBUG   SenderThread:502064 [sender.py:send_request():409] send_request: stop_status
+2024-05-21 21:43:42,054 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-21 21:43:42,286 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: status_report
+2024-05-21 21:43:47,287 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: status_report
+2024-05-21 21:43:52,288 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: status_report
+2024-05-21 21:43:52,530 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:52,531 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:52,531 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:52,531 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:52,531 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:52,531 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:52,531 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:52,531 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:52,531 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:52,531 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:52,531 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:52,532 DEBUG   SenderThread:502064 [sender.py:send():382] send: history
+2024-05-21 21:43:52,532 DEBUG   SenderThread:502064 [sender.py:send_request():409] send_request: summary_record
+2024-05-21 21:43:52,532 INFO    SenderThread:502064 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-21 21:43:52,546 INFO    Thread-12 :502064 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/Sigmoid_weighted_NonReLU_shaping_MAPPO/wandb/run-20240521_214239-3z7rx6mv/files/wandb-summary.json
+2024-05-21 21:43:52,712 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:52,712 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-21 21:43:53,547 INFO    Thread-12 :502064 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/Sigmoid_weighted_NonReLU_shaping_MAPPO/wandb/run-20240521_214239-3z7rx6mv/files/output.log
+2024-05-21 21:43:57,013 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-21 21:43:57,013 DEBUG   SenderThread:502064 [sender.py:send_request():409] send_request: stop_status
+2024-05-21 21:43:57,016 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-21 21:43:58,286 DEBUG   HandlerThread:502064 [handler.py:handle_request():146] handle_request: status_report
+2024-05-21 21:44:01,603 INFO    MainThread:502064 [internal.py:handle_exit():76] Internal process exited
+2024-05-21 21:44:01,622 INFO    memory    :502064 [interfaces.py:monitor():140] Process proc.memory.rssMB has exited.
+2024-05-21 21:44:01,622 DEBUG   SystemMonitor:502064 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-05-21 21:44:01,623 DEBUG   SystemMonitor:502064 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-05-21 21:44:01,624 DEBUG   SenderThread:502064 [sender.py:send():382] send: stats

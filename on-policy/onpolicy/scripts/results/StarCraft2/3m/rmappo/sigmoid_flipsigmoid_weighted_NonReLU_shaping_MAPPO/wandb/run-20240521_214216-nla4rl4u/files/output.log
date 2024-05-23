@@ -1,0 +1,14 @@
+/home/uosai/Desktop/on-policy/onpolicy/envs/starcraft2/StarCraft2_Env.py:462: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  actions_int = [int(a) for a in actions]
+Traceback (most recent call last):
+  File "/home/uosai/Desktop/on-policy/onpolicy/scripts/train/train_smac.py", line 290, in <module>
+    main(sys.argv[1:])
+  File "/home/uosai/Desktop/on-policy/onpolicy/scripts/train/train_smac.py", line 275, in main
+    runner.run()
+  File "/home/uosai/Desktop/on-policy/onpolicy/runner/shared/smac_runner.py", line 47, in run
+    rewards, shaping_weight = self.reward_function.reward_shaping(episode = episode, episodes = episodes, step = step, obs = torch.flatten(torch.tensor(obs)), rewards = rewards)
+  File "/home/uosai/Desktop/on-policy/onpolicy/runner/shared/_reward_function.py", line 89, in reward_shaping
+    shaping_weight = self.shaping_weight_function(episode = episode, episodes = episodes)
+  File "/home/uosai/Desktop/on-policy/onpolicy/runner/shared/_reward_function.py", line 82, in shaping_weight_function
+    return shaping_weight
+UnboundLocalError: local variable 'shaping_weight' referenced before assignment

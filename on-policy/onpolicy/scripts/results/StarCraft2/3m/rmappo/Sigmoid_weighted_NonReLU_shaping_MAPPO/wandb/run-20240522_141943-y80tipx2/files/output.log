@@ -1,0 +1,449 @@
+/home/uosai/Desktop/on-policy/onpolicy/envs/starcraft2/StarCraft2_Env.py:462: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  actions_int = [int(a) for a in actions]
+/home/uosai/Desktop/miniconda3/envs/marl/lib/python3.9/site-packages/torch/nn/modules/loss.py:535: UserWarning: Using a target size (torch.Size([])) that is different to the input size (torch.Size([1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.mse_loss(input, target, reduction=self.reduction)
+/home/uosai/Desktop/miniconda3/envs/marl/lib/python3.9/site-packages/wandb/util.py:449: DeprecationWarning:
+Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
+(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
+but was not found to be installed on your system.
+If this would cause problems for you,
+please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
+  import pandas as pd
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 0/20000 episodes, total num timesteps 100/2000000, FPS 29.
+incre win rate is 0.0.
+/home/uosai/Desktop/on-policy/onpolicy/envs/starcraft2/StarCraft2_Env.py:462: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  actions_int = [int(a) for a in actions]
+/home/uosai/Desktop/miniconda3/envs/marl/lib/python3.9/site-packages/torch/nn/modules/loss.py:535: UserWarning: Using a target size (torch.Size([])) that is different to the input size (torch.Size([1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.mse_loss(input, target, reduction=self.reduction)
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 10/20000 episodes, total num timesteps 1100/2000000, FPS 29.
+incre win rate is 0.0.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 20/20000 episodes, total num timesteps 2100/2000000, FPS 32.
+incre win rate is 0.0.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 30/20000 episodes, total num timesteps 3100/2000000, FPS 33.
+incre win rate is 0.0.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 40/20000 episodes, total num timesteps 4100/2000000, FPS 34.
+incre win rate is 0.0.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 50/20000 episodes, total num timesteps 5100/2000000, FPS 34.
+incre win rate is 0.0.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 60/20000 episodes, total num timesteps 6100/2000000, FPS 35.
+incre win rate is 0.022727272727272728.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 70/20000 episodes, total num timesteps 7100/2000000, FPS 35.
+incre win rate is 0.0.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 80/20000 episodes, total num timesteps 8100/2000000, FPS 35.
+incre win rate is 0.06976744186046512.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 90/20000 episodes, total num timesteps 9100/2000000, FPS 35.
+incre win rate is 0.11627906976744186.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 100/20000 episodes, total num timesteps 10100/2000000, FPS 35.
+incre win rate is 0.022727272727272728.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 110/20000 episodes, total num timesteps 11100/2000000, FPS 35.
+incre win rate is 0.043478260869565216.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 120/20000 episodes, total num timesteps 12100/2000000, FPS 35.
+incre win rate is 0.043478260869565216.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 130/20000 episodes, total num timesteps 13100/2000000, FPS 35.
+incre win rate is 0.11904761904761904.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 140/20000 episodes, total num timesteps 14100/2000000, FPS 35.
+incre win rate is 0.11904761904761904.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 150/20000 episodes, total num timesteps 15100/2000000, FPS 35.
+incre win rate is 0.12195121951219512.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 160/20000 episodes, total num timesteps 16100/2000000, FPS 35.
+incre win rate is 0.09302325581395349.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 170/20000 episodes, total num timesteps 17100/2000000, FPS 35.
+incre win rate is 0.021739130434782608.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 180/20000 episodes, total num timesteps 18100/2000000, FPS 36.
+incre win rate is 0.06382978723404255.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 190/20000 episodes, total num timesteps 19100/2000000, FPS 36.
+incre win rate is 0.06976744186046512.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 200/20000 episodes, total num timesteps 20100/2000000, FPS 36.
+incre win rate is 0.1590909090909091.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 210/20000 episodes, total num timesteps 21100/2000000, FPS 36.
+incre win rate is 0.14634146341463414.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 220/20000 episodes, total num timesteps 22100/2000000, FPS 36.
+incre win rate is 0.175.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 230/20000 episodes, total num timesteps 23100/2000000, FPS 36.
+incre win rate is 0.045454545454545456.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 240/20000 episodes, total num timesteps 24100/2000000, FPS 36.
+incre win rate is 0.13157894736842105.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 250/20000 episodes, total num timesteps 25100/2000000, FPS 36.
+incre win rate is 0.25.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 260/20000 episodes, total num timesteps 26100/2000000, FPS 36.
+incre win rate is 0.23809523809523808.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 270/20000 episodes, total num timesteps 27100/2000000, FPS 36.
+incre win rate is 0.025.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 280/20000 episodes, total num timesteps 28100/2000000, FPS 36.
+incre win rate is 0.09523809523809523.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 290/20000 episodes, total num timesteps 29100/2000000, FPS 36.
+incre win rate is 0.14634146341463414.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 300/20000 episodes, total num timesteps 30100/2000000, FPS 36.
+incre win rate is 0.21951219512195122.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 310/20000 episodes, total num timesteps 31100/2000000, FPS 36.
+incre win rate is 0.0.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 320/20000 episodes, total num timesteps 32100/2000000, FPS 36.
+incre win rate is 0.0.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 330/20000 episodes, total num timesteps 33100/2000000, FPS 36.
+incre win rate is 0.10526315789473684.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 340/20000 episodes, total num timesteps 34100/2000000, FPS 36.
+incre win rate is 0.13513513513513514.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 350/20000 episodes, total num timesteps 35100/2000000, FPS 36.
+incre win rate is 0.030303030303030304.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 360/20000 episodes, total num timesteps 36100/2000000, FPS 36.
+incre win rate is 0.11764705882352941.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 370/20000 episodes, total num timesteps 37100/2000000, FPS 36.
+incre win rate is 0.030303030303030304.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 380/20000 episodes, total num timesteps 38100/2000000, FPS 36.
+incre win rate is 0.17142857142857143.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 390/20000 episodes, total num timesteps 39100/2000000, FPS 36.
+incre win rate is 0.2702702702702703.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 400/20000 episodes, total num timesteps 40100/2000000, FPS 36.
+incre win rate is 0.225.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 410/20000 episodes, total num timesteps 41100/2000000, FPS 36.
+incre win rate is 0.06451612903225806.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 420/20000 episodes, total num timesteps 42100/2000000, FPS 36.
+incre win rate is 0.0.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 430/20000 episodes, total num timesteps 43100/2000000, FPS 36.
+incre win rate is 0.0967741935483871.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 440/20000 episodes, total num timesteps 44100/2000000, FPS 36.
+incre win rate is 0.09375.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 450/20000 episodes, total num timesteps 45100/2000000, FPS 36.
+incre win rate is 0.22857142857142856.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 460/20000 episodes, total num timesteps 46100/2000000, FPS 36.
+incre win rate is 0.2.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 470/20000 episodes, total num timesteps 47100/2000000, FPS 36.
+incre win rate is 0.13793103448275862.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 480/20000 episodes, total num timesteps 48100/2000000, FPS 36.
+incre win rate is 0.06060606060606061.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 490/20000 episodes, total num timesteps 49100/2000000, FPS 36.
+incre win rate is 0.0.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 500/20000 episodes, total num timesteps 50100/2000000, FPS 36.
+incre win rate is 0.0.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 510/20000 episodes, total num timesteps 51100/2000000, FPS 36.
+incre win rate is 0.07142857142857142.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 520/20000 episodes, total num timesteps 52100/2000000, FPS 36.
+incre win rate is 0.0.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 530/20000 episodes, total num timesteps 53100/2000000, FPS 36.
+incre win rate is 0.03571428571428571.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 540/20000 episodes, total num timesteps 54100/2000000, FPS 36.
+incre win rate is 0.03125.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 550/20000 episodes, total num timesteps 55100/2000000, FPS 36.
+incre win rate is 0.0625.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 560/20000 episodes, total num timesteps 56100/2000000, FPS 36.
+incre win rate is 0.12121212121212122.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 570/20000 episodes, total num timesteps 57100/2000000, FPS 36.
+incre win rate is 0.16129032258064516.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 580/20000 episodes, total num timesteps 58100/2000000, FPS 36.
+incre win rate is 0.06451612903225806.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 590/20000 episodes, total num timesteps 59100/2000000, FPS 36.
+incre win rate is 0.34146341463414637.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 600/20000 episodes, total num timesteps 60100/2000000, FPS 36.
+incre win rate is 0.22857142857142856.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 610/20000 episodes, total num timesteps 61100/2000000, FPS 36.
+incre win rate is 0.11428571428571428.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 620/20000 episodes, total num timesteps 62100/2000000, FPS 36.
+incre win rate is 0.038461538461538464.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 630/20000 episodes, total num timesteps 63100/2000000, FPS 36.
+incre win rate is 0.03333333333333333.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 640/20000 episodes, total num timesteps 64100/2000000, FPS 36.
+incre win rate is 0.18181818181818182.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 650/20000 episodes, total num timesteps 65100/2000000, FPS 36.
+incre win rate is 0.0625.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 660/20000 episodes, total num timesteps 66100/2000000, FPS 36.
+incre win rate is 0.10714285714285714.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 670/20000 episodes, total num timesteps 67100/2000000, FPS 36.
+incre win rate is 0.0.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 680/20000 episodes, total num timesteps 68100/2000000, FPS 36.
+incre win rate is 0.21739130434782608.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 690/20000 episodes, total num timesteps 69100/2000000, FPS 36.
+incre win rate is 0.2.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 700/20000 episodes, total num timesteps 70100/2000000, FPS 36.
+incre win rate is 0.045454545454545456.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 710/20000 episodes, total num timesteps 71100/2000000, FPS 36.
+incre win rate is 0.34375.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 720/20000 episodes, total num timesteps 72100/2000000, FPS 36.
+incre win rate is 0.375.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 730/20000 episodes, total num timesteps 73100/2000000, FPS 36.
+incre win rate is 0.14814814814814814.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 740/20000 episodes, total num timesteps 74100/2000000, FPS 36.
+incre win rate is 0.12.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 750/20000 episodes, total num timesteps 75100/2000000, FPS 36.
+incre win rate is 0.07407407407407407.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 760/20000 episodes, total num timesteps 76100/2000000, FPS 36.
+incre win rate is 0.2857142857142857.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 770/20000 episodes, total num timesteps 77100/2000000, FPS 36.
+incre win rate is 0.4375.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 780/20000 episodes, total num timesteps 78100/2000000, FPS 36.
+incre win rate is 0.7142857142857143.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 790/20000 episodes, total num timesteps 79100/2000000, FPS 36.
+incre win rate is 0.7073170731707317.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 800/20000 episodes, total num timesteps 80100/2000000, FPS 36.
+incre win rate is 0.5675675675675675.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 810/20000 episodes, total num timesteps 81100/2000000, FPS 36.
+incre win rate is 0.6285714285714286.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 820/20000 episodes, total num timesteps 82100/2000000, FPS 36.
+incre win rate is 0.6666666666666666.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 830/20000 episodes, total num timesteps 83100/2000000, FPS 36.
+incre win rate is 0.45454545454545453.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 840/20000 episodes, total num timesteps 84100/2000000, FPS 36.
+incre win rate is 0.47058823529411764.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 850/20000 episodes, total num timesteps 85100/2000000, FPS 36.
+incre win rate is 0.6666666666666666.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 860/20000 episodes, total num timesteps 86100/2000000, FPS 36.
+incre win rate is 0.5555555555555556.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 870/20000 episodes, total num timesteps 87100/2000000, FPS 36.
+incre win rate is 0.4074074074074074.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 880/20000 episodes, total num timesteps 88100/2000000, FPS 36.
+incre win rate is 0.08333333333333333.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 890/20000 episodes, total num timesteps 89100/2000000, FPS 36.
+incre win rate is 0.45161290322580644.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 900/20000 episodes, total num timesteps 90100/2000000, FPS 36.
+incre win rate is 0.42424242424242425.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 910/20000 episodes, total num timesteps 91100/2000000, FPS 36.
+incre win rate is 0.725.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 920/20000 episodes, total num timesteps 92100/2000000, FPS 36.
+incre win rate is 0.5945945945945946.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 930/20000 episodes, total num timesteps 93100/2000000, FPS 36.
+incre win rate is 0.4594594594594595.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 940/20000 episodes, total num timesteps 94100/2000000, FPS 36.
+incre win rate is 0.2903225806451613.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 950/20000 episodes, total num timesteps 95100/2000000, FPS 36.
+incre win rate is 0.39285714285714285.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 960/20000 episodes, total num timesteps 96100/2000000, FPS 36.
+incre win rate is 0.6176470588235294.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 970/20000 episodes, total num timesteps 97100/2000000, FPS 36.
+incre win rate is 0.775.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 980/20000 episodes, total num timesteps 98100/2000000, FPS 36.
+incre win rate is 0.7560975609756098.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 990/20000 episodes, total num timesteps 99100/2000000, FPS 36.
+incre win rate is 0.725.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1000/20000 episodes, total num timesteps 100100/2000000, FPS 36.
+incre win rate is 0.6923076923076923.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1010/20000 episodes, total num timesteps 101100/2000000, FPS 36.
+incre win rate is 0.6666666666666666.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1020/20000 episodes, total num timesteps 102100/2000000, FPS 36.
+incre win rate is 0.4722222222222222.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1030/20000 episodes, total num timesteps 103100/2000000, FPS 36.
+incre win rate is 0.65.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1040/20000 episodes, total num timesteps 104100/2000000, FPS 36.
+incre win rate is 0.5121951219512195.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1050/20000 episodes, total num timesteps 105100/2000000, FPS 36.
+incre win rate is 0.5681818181818182.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1060/20000 episodes, total num timesteps 106100/2000000, FPS 36.
+incre win rate is 0.7142857142857143.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1070/20000 episodes, total num timesteps 107100/2000000, FPS 36.
+incre win rate is 0.5641025641025641.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1080/20000 episodes, total num timesteps 108100/2000000, FPS 36.
+incre win rate is 0.5588235294117647.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1090/20000 episodes, total num timesteps 109100/2000000, FPS 36.
+incre win rate is 0.7105263157894737.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1100/20000 episodes, total num timesteps 110100/2000000, FPS 36.
+incre win rate is 0.4864864864864865.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1110/20000 episodes, total num timesteps 111100/2000000, FPS 36.
+incre win rate is 0.4594594594594595.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1120/20000 episodes, total num timesteps 112100/2000000, FPS 36.
+incre win rate is 0.5384615384615384.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1130/20000 episodes, total num timesteps 113100/2000000, FPS 36.
+incre win rate is 0.5135135135135135.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1140/20000 episodes, total num timesteps 114100/2000000, FPS 36.
+incre win rate is 0.5121951219512195.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1150/20000 episodes, total num timesteps 115100/2000000, FPS 36.
+incre win rate is 0.4146341463414634.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1160/20000 episodes, total num timesteps 116100/2000000, FPS 36.
+incre win rate is 0.43902439024390244.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1170/20000 episodes, total num timesteps 117100/2000000, FPS 36.
+incre win rate is 0.4418604651162791.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1180/20000 episodes, total num timesteps 118100/2000000, FPS 36.
+incre win rate is 0.6976744186046512.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1190/20000 episodes, total num timesteps 119100/2000000, FPS 36.
+incre win rate is 0.3076923076923077.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1200/20000 episodes, total num timesteps 120100/2000000, FPS 36.
+incre win rate is 0.4318181818181818.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1210/20000 episodes, total num timesteps 121100/2000000, FPS 36.
+incre win rate is 0.4878048780487805.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1220/20000 episodes, total num timesteps 122100/2000000, FPS 36.
+incre win rate is 0.5348837209302325.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1230/20000 episodes, total num timesteps 123100/2000000, FPS 36.
+incre win rate is 0.3409090909090909.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1240/20000 episodes, total num timesteps 124100/2000000, FPS 36.
+incre win rate is 0.40476190476190477.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1250/20000 episodes, total num timesteps 125100/2000000, FPS 36.
+incre win rate is 0.5714285714285714.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1260/20000 episodes, total num timesteps 126100/2000000, FPS 36.
+incre win rate is 0.4634146341463415.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1270/20000 episodes, total num timesteps 127100/2000000, FPS 36.
+incre win rate is 0.38095238095238093.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1280/20000 episodes, total num timesteps 128100/2000000, FPS 36.
+incre win rate is 0.38095238095238093.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1290/20000 episodes, total num timesteps 129100/2000000, FPS 36.
+incre win rate is 0.4146341463414634.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1300/20000 episodes, total num timesteps 130100/2000000, FPS 36.
+incre win rate is 0.375.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1310/20000 episodes, total num timesteps 131100/2000000, FPS 36.
+incre win rate is 0.6097560975609756.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1320/20000 episodes, total num timesteps 132100/2000000, FPS 36.
+incre win rate is 0.3170731707317073.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1330/20000 episodes, total num timesteps 133100/2000000, FPS 36.
+incre win rate is 0.8095238095238095.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1340/20000 episodes, total num timesteps 134100/2000000, FPS 36.
+incre win rate is 0.7619047619047619.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1350/20000 episodes, total num timesteps 135100/2000000, FPS 36.
+incre win rate is 0.7727272727272727.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1360/20000 episodes, total num timesteps 136100/2000000, FPS 36.
+incre win rate is 0.65.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1370/20000 episodes, total num timesteps 137100/2000000, FPS 36.
+incre win rate is 0.5581395348837209.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1380/20000 episodes, total num timesteps 138100/2000000, FPS 36.
+incre win rate is 0.6585365853658537.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1390/20000 episodes, total num timesteps 139100/2000000, FPS 36.
+incre win rate is 0.6046511627906976.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1400/20000 episodes, total num timesteps 140100/2000000, FPS 36.
+incre win rate is 0.6.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1410/20000 episodes, total num timesteps 141100/2000000, FPS 36.
+incre win rate is 0.34146341463414637.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1420/20000 episodes, total num timesteps 142100/2000000, FPS 36.
+incre win rate is 0.525.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1430/20000 episodes, total num timesteps 143100/2000000, FPS 36.
+incre win rate is 0.5128205128205128.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_NonReLU_shaping_MAPPO updates 1440/20000 episodes, total num timesteps 144100/2000000, FPS 36.
+incre win rate is 0.5853658536585366.

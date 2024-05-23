@@ -1,0 +1,19 @@
+2024-05-23 17:08:35,494 INFO    StreamThr :1475289 [internal.py:wandb_internal():86] W&B internal server running at pid: 1475289, started at: 2024-05-23 17:08:35.494219
+2024-05-23 17:08:35,495 DEBUG   HandlerThread:1475289 [handler.py:handle_request():146] handle_request: status
+2024-05-23 17:08:35,500 INFO    WriterThread:1475289 [datastore.py:open_for_write():87] open: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/sigmoid_flipsigmoid_weighted_l1loss_shaping_MAPPO/wandb/run-20240523_170835-4ep2aq76/run-4ep2aq76.wandb
+2024-05-23 17:08:35,501 DEBUG   SenderThread:1475289 [sender.py:send():382] send: header
+2024-05-23 17:08:35,518 DEBUG   SenderThread:1475289 [sender.py:send():382] send: run
+2024-05-23 17:08:36,030 INFO    SenderThread:1475289 [dir_watcher.py:__init__():211] watching files in: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/sigmoid_flipsigmoid_weighted_l1loss_shaping_MAPPO/wandb/run-20240523_170835-4ep2aq76/files
+2024-05-23 17:08:36,030 INFO    SenderThread:1475289 [sender.py:_start_run_threads():1136] run started: 4ep2aq76 with start time 1716451715.495213
+2024-05-23 17:08:36,497 WARNING StreamThr :1475289 [internal.py:is_dead():414] Internal process exiting, parent pid 1474664 disappeared
+2024-05-23 17:08:36,497 ERROR   StreamThr :1475289 [internal.py:wandb_internal():152] Internal process shutdown.
+2024-05-23 17:08:36,517 INFO    HandlerThread:1475289 [handler.py:finish():869] shutting down handler
+2024-05-23 17:08:36,518 INFO    WriterThread:1475289 [datastore.py:close():296] close: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/sigmoid_flipsigmoid_weighted_l1loss_shaping_MAPPO/wandb/run-20240523_170835-4ep2aq76/run-4ep2aq76.wandb
+2024-05-23 17:08:37,030 INFO    SenderThread:1475289 [sender.py:finish():1572] shutting down sender
+2024-05-23 17:08:37,030 INFO    SenderThread:1475289 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-05-23 17:08:38,030 INFO    SenderThread:1475289 [dir_watcher.py:finish():388] scan: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/sigmoid_flipsigmoid_weighted_l1loss_shaping_MAPPO/wandb/run-20240523_170835-4ep2aq76/files
+2024-05-23 17:08:38,030 INFO    SenderThread:1475289 [dir_watcher.py:finish():402] scan save: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/sigmoid_flipsigmoid_weighted_l1loss_shaping_MAPPO/wandb/run-20240523_170835-4ep2aq76/files/config.yaml config.yaml
+2024-05-23 17:08:38,031 INFO    SenderThread:1475289 [file_pusher.py:finish():175] shutting down file pusher
+2024-05-23 17:08:38,031 INFO    SenderThread:1475289 [file_pusher.py:join():181] waiting for file pusher
+2024-05-23 17:08:38,838 INFO    wandb-upload_0:1475289 [upload_job.py:push():131] Uploaded file /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/sigmoid_flipsigmoid_weighted_l1loss_shaping_MAPPO/wandb/run-20240523_170835-4ep2aq76/files/config.yaml
+2024-05-23 17:08:38,839 INFO    MainThread:1475289 [internal.py:handle_exit():76] Internal process exited

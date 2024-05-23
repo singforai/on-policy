@@ -1,0 +1,26 @@
+/home/uosai/Desktop/on-policy/onpolicy/envs/starcraft2/StarCraft2_Env.py:462: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  actions_int = [int(a) for a in actions]
+/home/uosai/Desktop/miniconda3/envs/marl/lib/python3.9/site-packages/torch/nn/modules/loss.py:535: UserWarning: Using a target size (torch.Size([])) that is different to the input size (torch.Size([1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.mse_loss(input, target, reduction=self.reduction)
+/home/uosai/Desktop/miniconda3/envs/marl/lib/python3.9/site-packages/wandb/util.py:449: DeprecationWarning:
+Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
+(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
+but was not found to be installed on your system.
+If this would cause problems for you,
+please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
+  import pandas as pd
+ Map 3m Algo rmappo Exp Sigmoid_weighted_shaping_MAPPO updates 0/20000 episodes, total num timesteps 100/2000000, FPS 27.
+incre win rate is 0.0.
+/home/uosai/Desktop/on-policy/onpolicy/envs/starcraft2/StarCraft2_Env.py:462: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  actions_int = [int(a) for a in actions]
+eval win rate is 0.0.
+/home/uosai/Desktop/miniconda3/envs/marl/lib/python3.9/site-packages/torch/nn/modules/loss.py:535: UserWarning: Using a target size (torch.Size([])) that is different to the input size (torch.Size([1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.mse_loss(input, target, reduction=self.reduction)
+ Map 3m Algo rmappo Exp Sigmoid_weighted_shaping_MAPPO updates 10/20000 episodes, total num timesteps 1100/2000000, FPS 28.
+incre win rate is 0.0.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_shaping_MAPPO updates 20/20000 episodes, total num timesteps 2100/2000000, FPS 32.
+incre win rate is 0.0.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp Sigmoid_weighted_shaping_MAPPO updates 30/20000 episodes, total num timesteps 3100/2000000, FPS 33.
+incre win rate is 0.0.
