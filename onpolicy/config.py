@@ -369,7 +369,7 @@ def get_config():
     )
     # save parameters
     parser.add_argument(
-        "--save_interval", type=int, default=100000, help="time duration between contiunous twice models saving."
+        "--save_interval", type=int, default=100000000, help="time duration between contiunous twice models saving."
     )
 
     # log parameters
