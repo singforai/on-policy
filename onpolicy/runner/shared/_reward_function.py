@@ -9,7 +9,8 @@ import torch.nn.functional as F
 
 
 class K_Means_Clustering:
-    def __init__(self, num_clusters, device, len_share_obs):
+    def __init__(self, episode_length, num_clusters, device, len_share_obs):
+        self.episode_length = episode_length
         self.num_clusters = num_clusters
         self.device = device
         self.len_share_obs = len_share_obs
@@ -35,6 +36,15 @@ class K_Means_Clustering:
 
         self.centroids_max_rewards = [float('-inf') for _ in range(self.num_clusters)]
     
+    def transform_share_obs(self, share_obs_set):
+        episode_length, n_features = share_obs_set.shape
+        step_share_obs_set = np.zeros((episode_length, n_features + 1))
+
+        for idx, share_obs in enumerate(share_obs_set):
+            step_share_obs_set[idx] = np.append(share_obs, idx/self.episode_length)
+        
+        return step_share_obs_set
+    
     def decision_clusters(self, share_obs_set, rewards_set):
         self.clusters = [[] for _ in range(self.num_clusters)]
         for point_idx, point in enumerate(share_obs_set):
@@ -52,6 +62,8 @@ class K_Means_Clustering:
                 self.centroids[idx] = np.mean(share_obs_set[cluster], axis=0)
     
     def training(self, episode, share_obs_set, rewards_set):
+
+        share_obs_set = self.transform_share_obs(share_obs_set = share_obs_set)
         
         if episode == 0:
             self.init_centroids(share_obs_set)
@@ -91,15 +103,17 @@ class K_Means_Clustering:
 
 class Reward_Function:
 
-    def __init__(self, num_clusters, device, share_obs):
+    def __init__(self, num_clusters, device, episode_length, share_obs):
         self.num_clusters = num_clusters
         self.device = device
         self.len_share_obs = len(share_obs)
 
         self.clustering = K_Means_Clustering(
+            episode_length = episode_length,
             num_clusters = self.num_clusters, 
             device = self.device, 
             len_share_obs = self.len_share_obs
+            
         )
 
         

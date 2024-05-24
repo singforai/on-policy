@@ -41,7 +41,7 @@ class SMACRunner(Runner):
                 if self.use_reward_shaping:
                     if episode > 0:
                         rewards = self.reward_shaping.clustering.predict_cluster(
-                            share_obs = np.array(share_obs).flatten(),
+                            share_obs = np.append(np.array(share_obs).flatten(), step / self.episode_length),
                             rewards = rewards
                         )
                 data = obs, share_obs, rewards, dones, infos, available_actions, \
@@ -57,6 +57,7 @@ class SMACRunner(Runner):
                     episode = episode,
                     share_obs_set = self.buffer.share_obs[1:].reshape(100, -1),
                     rewards_set = self.buffer.rewards[:, :, 0, :].reshape(100),
+                    
                 )
 
 
@@ -123,6 +124,7 @@ class SMACRunner(Runner):
             self.reward_shaping = Reward_Function(
                 num_clusters = self.num_clusters, 
                 device = self.device, 
+                episode_length = self.episode_length,
                 share_obs = torch.flatten(torch.tensor(share_obs))
             )
                 
