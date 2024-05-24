@@ -1,0 +1,19 @@
+2024-05-24 13:08:35,149 INFO    StreamThr :1632453 [internal.py:wandb_internal():86] W&B internal server running at pid: 1632453, started at: 2024-05-24 13:08:35.148839
+2024-05-24 13:08:35,150 DEBUG   HandlerThread:1632453 [handler.py:handle_request():146] handle_request: status
+2024-05-24 13:08:35,154 INFO    WriterThread:1632453 [datastore.py:open_for_write():87] open: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/clusterized_shaping_MAPPO/wandb/run-20240524_130835-2ur21k74/run-2ur21k74.wandb
+2024-05-24 13:08:35,155 DEBUG   SenderThread:1632453 [sender.py:send():382] send: header
+2024-05-24 13:08:35,156 DEBUG   SenderThread:1632453 [sender.py:send():382] send: run
+2024-05-24 13:08:35,745 INFO    SenderThread:1632453 [dir_watcher.py:__init__():211] watching files in: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/clusterized_shaping_MAPPO/wandb/run-20240524_130835-2ur21k74/files
+2024-05-24 13:08:35,746 INFO    SenderThread:1632453 [sender.py:_start_run_threads():1136] run started: 2ur21k74 with start time 1716523715.148522
+2024-05-24 13:08:36,153 WARNING StreamThr :1632453 [internal.py:is_dead():414] Internal process exiting, parent pid 1631950 disappeared
+2024-05-24 13:08:36,153 ERROR   StreamThr :1632453 [internal.py:wandb_internal():152] Internal process shutdown.
+2024-05-24 13:08:36,156 INFO    HandlerThread:1632453 [handler.py:finish():869] shutting down handler
+2024-05-24 13:08:36,156 INFO    WriterThread:1632453 [datastore.py:close():296] close: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/clusterized_shaping_MAPPO/wandb/run-20240524_130835-2ur21k74/run-2ur21k74.wandb
+2024-05-24 13:08:36,746 INFO    SenderThread:1632453 [sender.py:finish():1572] shutting down sender
+2024-05-24 13:08:36,746 INFO    SenderThread:1632453 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-05-24 13:08:37,746 INFO    SenderThread:1632453 [dir_watcher.py:finish():388] scan: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/clusterized_shaping_MAPPO/wandb/run-20240524_130835-2ur21k74/files
+2024-05-24 13:08:37,746 INFO    SenderThread:1632453 [dir_watcher.py:finish():402] scan save: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/clusterized_shaping_MAPPO/wandb/run-20240524_130835-2ur21k74/files/config.yaml config.yaml
+2024-05-24 13:08:37,746 INFO    SenderThread:1632453 [file_pusher.py:finish():175] shutting down file pusher
+2024-05-24 13:08:37,749 INFO    SenderThread:1632453 [file_pusher.py:join():181] waiting for file pusher
+2024-05-24 13:08:38,541 INFO    wandb-upload_0:1632453 [upload_job.py:push():131] Uploaded file /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/clusterized_shaping_MAPPO/wandb/run-20240524_130835-2ur21k74/files/config.yaml
+2024-05-24 13:08:38,542 INFO    MainThread:1632453 [internal.py:handle_exit():76] Internal process exited

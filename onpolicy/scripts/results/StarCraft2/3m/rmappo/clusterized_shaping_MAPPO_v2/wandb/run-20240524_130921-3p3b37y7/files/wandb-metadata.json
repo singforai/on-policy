@@ -1,0 +1,179 @@
+{
+    "os": "Linux-6.5.0-35-generic-x86_64-with-glibc2.35",
+    "python": "3.9.18",
+    "heartbeatAt": "2024-05-24T04:09:22.193351",
+    "startedAt": "2024-05-24T04:09:21.525608",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--seed",
+        "350",
+        "--env_name",
+        "StarCraft2",
+        "--experiment_name",
+        "clusterized_shaping_MAPPO_v2",
+        "--group_name",
+        "clusterized_shaping_MAPPO_v2",
+        "--num_clusters",
+        "20",
+        "--num_gpu",
+        "1"
+    ],
+    "state": "running",
+    "program": "/home/uosai/Desktop/on-policy/onpolicy/scripts/train/train_smac.py",
+    "codePathLocal": "train_smac.py",
+    "codePath": "train_smac.py",
+    "host": "uos-desktop",
+    "username": "uosai",
+    "executable": "/home/uosai/Desktop/miniconda3/envs/marl/bin/python",
+    "cpu_count": 12,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 4516.748083333333,
+        "min": 2200.0,
+        "max": 3700.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4584.728,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4579.198,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4580.678,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4580.745,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4584.372,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4583.204,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4579.885,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4585.192,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4590.526,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4582.421,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4590.442,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4581.951,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4576.896,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4581.353,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4586.456,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4582.042,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4582.586,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4584.769,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4588.199,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4588.856,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4585.304,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4582.807,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4585.282,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4579.292,
+            "min": 2200.0,
+            "max": 3700.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 233.17998886108398,
+            "used": 180.08375930786133
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3080",
+    "gpu_count": 2,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3080",
+            "memory_total": 10737418240
+        },
+        {
+            "name": "NVIDIA GeForce RTX 3080",
+            "memory_total": 10737418240
+        }
+    ],
+    "memory": {
+        "total": 62.70906448364258
+    }
+}
