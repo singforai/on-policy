@@ -71,7 +71,7 @@ class K_Means_Clustering:
         if rewards[0][0][0] == expected_max_rewards:
             return rewards
         else:
-            return rewards - (expected_max_rewards - rewards)
+            return rewards - expected_max_rewards
 
     def predict_cluster(self, share_obs, rewards):
         distances = []
