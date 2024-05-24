@@ -81,7 +81,6 @@ def make_train_env(all_args):
     else:
         return ShareSubprocVecEnv([get_env_fn(i) for i in range(all_args.n_rollout_threads)])
 
-
 def make_eval_env(all_args):
     def get_env_fn(rank):
         def init_env():

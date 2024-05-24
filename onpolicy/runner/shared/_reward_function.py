@@ -45,14 +45,28 @@ class K_Means_Clustering:
         
         return step_share_obs_set
     
+    def distance_weight(self, point, closest_centroid_idx):
+    
+        dist_weight = np.exp(-1/self.num_clusters*np.sqrt(np.sum((self.centroids[closest_centroid_idx] - point)**2)))
+        return dist_weight
+
     def decision_clusters(self, share_obs_set, rewards_set):
         self.clusters = [[] for _ in range(self.num_clusters)]
         for point_idx, point in enumerate(share_obs_set):
             closest_centroid_idx = np.argmin(np.sqrt(np.sum((point-self.centroids)**2, axis=1)))
             self.clusters[closest_centroid_idx].append(point_idx)
+            
+            dist_weight = self.distance_weight(
+                point = point,
+                closest_centroid_idx = closest_centroid_idx,
+            )
 
-            if rewards_set[point_idx] > self.centroids_max_rewards[closest_centroid_idx]:
-                self.centroids_max_rewards[closest_centroid_idx] = rewards_set[point_idx]
+            weighted_rewards = dist_weight * rewards_set[point_idx]
+
+            if weighted_rewards > self.centroids_max_rewards[closest_centroid_idx]:
+                self.centroids_max_rewards[closest_centroid_idx] = weighted_rewards
+            
+            print(self.centroids_max_rewards)
 
     def cal_new_centroids(self, share_obs_set):
         for idx, cluster in enumerate(self.clusters):
@@ -77,9 +91,8 @@ class K_Means_Clustering:
 
         self.cal_new_centroids(share_obs_set = share_obs_set)
 
-
-
     def change_rewards(self, rewards, expected_max_rewards):
+
         if rewards[0][0][0] == expected_max_rewards:
             return rewards
         else:
