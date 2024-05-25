@@ -13,7 +13,7 @@
 # wait 
 
 #clusterized_reward_shaping
-command="python train_smac.py --seed {0} --env_name StarCraft2 --experiment_name clusterized_shaping_MAPPO_v2 --group_name clusterized_shaping_MAPPO_v2 --num_clusters 20" 
+command="python train_smac.py --seed {0} --env_name StarCraft2 --experiment_name clusterized_shaping_MAPPO_v5 --group_name clusterized_shaping_MAPPO_v5 --num_clusters 5 --use_visual_cluster" 
 
 args_gpu0="--num_gpu 0"
 args_gpu1="--num_gpu 1"

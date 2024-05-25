@@ -17,7 +17,7 @@ class SMACRunner(Runner):
     def run(self):
         self.warmup()   
 
-
+        self.share_obs_memory = torch.zeros()
         start = time.time()
         episodes = int(self.num_env_steps) // self.episode_length // self.n_rollout_threads
 
@@ -41,7 +41,7 @@ class SMACRunner(Runner):
                 if self.use_reward_shaping:
                     if episode > 0:
                         rewards = self.reward_shaping.clustering.predict_cluster(
-                            share_obs = np.append(np.array(share_obs).flatten(), step / self.episode_length),
+                            share_obs = np.array(share_obs).flatten(),
                             rewards = rewards
                         )
                 data = obs, share_obs, rewards, dones, infos, available_actions, \
@@ -50,16 +50,20 @@ class SMACRunner(Runner):
                 
                 # insert data into buffer
                 self.insert(data)
-
             #train_clustering
             if self.use_reward_shaping:
                 self.reward_shaping.clustering.training(
                     episode = episode,
                     share_obs_set = self.buffer.share_obs[1:].reshape(100, -1),
                     rewards_set = self.buffer.rewards[:, :, 0, :].reshape(100),
-                    
-                )
 
+                )
+                if self.use_visual_cluster:
+                    if episode % self.visual_cluster_interval == 0:
+                        self.reward_shaping.clustering.visualize_clusters(
+                            episode = episode,
+                            share_obs_set = self.buffer.share_obs[1:].reshape(100, -1),
+                        )
 
             # compute return and update network
             self.compute()

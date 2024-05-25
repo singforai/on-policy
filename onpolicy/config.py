@@ -163,10 +163,23 @@ def get_config():
         help="share_obs에 대해서 clustering을 수행함.",
     )
     parser.add_argument(
+        "--visual_cluster_interval",
+        type = int,
+        default= 200,
+        help="cluster를 시각화하는 간격",
+    )
+    parser.add_argument(
+        "--use_visual_cluster",
+        action = "store_false",
+        default= True,
+        help="cluster를 시각화할 것인가?",
+    )
+    parser.add_argument(
         "--cluster_update_interval",
         type = int,
         default= 1,
         help="K-means clustering을 업데이트하는 에피소드 간격",
+        
     )
     parser.add_argument(
         "--use_reward_shaping",
