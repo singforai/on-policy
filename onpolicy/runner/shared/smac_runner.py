@@ -5,7 +5,7 @@ from functools import reduce
 import torch
 from onpolicy.runner.shared.base_runner import Runner
 
-from onpolicy.runner.shared._reward_function import Reward_Function
+
 def _t2n(x):
     return x.detach().cpu().numpy()
 
@@ -16,8 +16,6 @@ class SMACRunner(Runner):
 
     def run(self):
         self.warmup()   
-
-        self.share_obs_memory = torch.zeros()
         start = time.time()
         episodes = int(self.num_env_steps) // self.episode_length // self.n_rollout_threads
 
@@ -28,49 +26,32 @@ class SMACRunner(Runner):
             if self.use_linear_lr_decay:
                 self.trainer.policy.lr_decay(episode, episodes)
 
-            self.episode_end = False
+            # post process
+            total_num_steps = (episode + 1) * self.episode_length * self.n_rollout_threads   
 
             for step in range(self.episode_length):
                 # Sample actions
-                values, actions, action_log_probs, rnn_states, rnn_states_critic = self.collect(step)
+                values, actions, action_log_probs, rnn_states, rnn_states_critic, flatten_critic_features\
+                      = self.collect(step)
                     
                 # Obser reward and next obs
                 obs, share_obs, rewards, dones, infos, available_actions = self.envs.step(actions)
-
-
-                if self.use_reward_shaping:
-                    if episode > 0:
-                        rewards = self.reward_shaping.clustering.predict_cluster(
-                            share_obs = np.array(share_obs).flatten(),
-                            rewards = rewards
-                        )
+                self.reward_shaping.feature_memory.append(flatten_critic_features)
+                self.reward_shaping.reward_memory.append(rewards[0][0][0])
+                rewards = self.reward_shaping.checking(total_num_steps, rewards)
+                
+                
                 data = obs, share_obs, rewards, dones, infos, available_actions, \
                        values, actions, action_log_probs, \
                        rnn_states, rnn_states_critic 
                 
                 # insert data into buffer
                 self.insert(data)
-            #train_clustering
-            if self.use_reward_shaping:
-                self.reward_shaping.clustering.training(
-                    episode = episode,
-                    share_obs_set = self.buffer.share_obs[1:].reshape(100, -1),
-                    rewards_set = self.buffer.rewards[:, :, 0, :].reshape(100),
-
-                )
-                if self.use_visual_cluster:
-                    if episode % self.visual_cluster_interval == 0:
-                        self.reward_shaping.clustering.visualize_clusters(
-                            episode = episode,
-                            share_obs_set = self.buffer.share_obs[1:].reshape(100, -1),
-                        )
 
             # compute return and update network
             self.compute()
             train_infos = self.train()
-            
-            # post process
-            total_num_steps = (episode + 1) * self.episode_length * self.n_rollout_threads           
+                    
             # save model
             if (episode % self.save_interval == 0 or episode == episodes - 1):
                 self.save()
@@ -124,15 +105,6 @@ class SMACRunner(Runner):
         # reset env
         obs, share_obs, available_actions = self.envs.reset()
 
-        if self.use_reward_shaping:
-            self.reward_shaping = Reward_Function(
-                num_clusters = self.num_clusters, 
-                device = self.device, 
-                episode_length = self.episode_length,
-                share_obs = torch.flatten(torch.tensor(share_obs))
-            )
-                
-
         # replay buffer
         if not self.use_centralized_V:
             share_obs = obs
@@ -144,21 +116,24 @@ class SMACRunner(Runner):
     @torch.no_grad()
     def collect(self, step):
         self.trainer.prep_rollout()
-        value, action, action_log_prob, rnn_state, rnn_state_critic \
-            = self.trainer.policy.get_actions(np.concatenate(self.buffer.share_obs[step]),
-                                            np.concatenate(self.buffer.obs[step]),
-                                            np.concatenate(self.buffer.rnn_states[step]),
-                                            np.concatenate(self.buffer.rnn_states_critic[step]),
-                                            np.concatenate(self.buffer.masks[step]),
-                                            np.concatenate(self.buffer.available_actions[step]))
-        # [self.envs, agents, dim]
+        value, action, action_log_prob, rnn_state, rnn_state_critic, flatten_critic_features\
+            = self.trainer.policy.get_actions(
+                cent_obs = np.concatenate(self.buffer.share_obs[step]),
+                obs = np.concatenate(self.buffer.obs[step]),
+                rnn_states_actor = np.concatenate(self.buffer.rnn_states[step]),
+                rnn_states_critic = np.concatenate(self.buffer.rnn_states_critic[step]),
+                masks = np.concatenate(self.buffer.masks[step]),
+                available_actions = np.concatenate(self.buffer.available_actions[step])
+            )
+
         values = np.array(np.split(_t2n(value), self.n_rollout_threads))
         actions = np.array(np.split(_t2n(action), self.n_rollout_threads))
         action_log_probs = np.array(np.split(_t2n(action_log_prob), self.n_rollout_threads))
         rnn_states = np.array(np.split(_t2n(rnn_state), self.n_rollout_threads))
         rnn_states_critic = np.array(np.split(_t2n(rnn_state_critic), self.n_rollout_threads))
+        
 
-        return values, actions, action_log_probs, rnn_states, rnn_states_critic
+        return values, actions, action_log_probs, rnn_states, rnn_states_critic, flatten_critic_features
 
     def insert(self, data):
         obs, share_obs, rewards, dones, infos, available_actions, \

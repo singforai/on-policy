@@ -137,6 +137,7 @@ class R_Critic(nn.Module):
         init_method = [nn.init.xavier_uniform_, nn.init.orthogonal_][self._use_orthogonal]
 
         cent_obs_shape = get_shape_from_obs_space(cent_obs_space)
+        
         base = CNNBase if len(cent_obs_shape) == 3 else MLPBase
         self.base = base(args, cent_obs_shape)
 
@@ -153,7 +154,7 @@ class R_Critic(nn.Module):
 
         self.to(device)
 
-    def forward(self, cent_obs, rnn_states, masks):
+    def forward(self, cent_obs, rnn_states, masks, sampling = False):
         """
         Compute actions from the given inputs.
         :param cent_obs: (np.ndarray / torch.Tensor) observation inputs into network.
@@ -172,4 +173,8 @@ class R_Critic(nn.Module):
             critic_features, rnn_states = self.rnn(critic_features, rnn_states, masks)
         values = self.v_out(critic_features)
 
-        return values, rnn_states
+        if sampling:
+            flatten_critic_features = critic_features.flatten().clone().detach().cpu()
+            return values, rnn_states, flatten_critic_features
+        else:
+            return values, rnn_states

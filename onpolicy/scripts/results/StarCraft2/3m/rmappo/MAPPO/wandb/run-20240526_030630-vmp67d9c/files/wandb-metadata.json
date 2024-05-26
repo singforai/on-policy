@@ -1,0 +1,186 @@
+{
+    "os": "Linux-6.5.0-35-generic-x86_64-with-glibc2.35",
+    "python": "3.9.18",
+    "heartbeatAt": "2024-05-25T18:06:31.189314",
+    "startedAt": "2024-05-25T18:06:30.548717",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--seed",
+        "92",
+        "--env_name",
+        "StarCraft2",
+        "--experiment_name",
+        "MAPPO",
+        "--group_name",
+        "critic_clustering_MAPPO_vec",
+        "--num_clusters",
+        "20",
+        "--use_visual_cluster",
+        "--num_gpu",
+        "1"
+    ],
+    "state": "running",
+    "program": "/home/uosai/Desktop/on-policy/onpolicy/scripts/train/train_smac.py",
+    "codePathLocal": "train_smac.py",
+    "codePath": "onpolicy/scripts/train/train_smac.py",
+    "git": {
+        "remote": "https://github.com/singforai/reward_shaping.git",
+        "commit": "14d4b373e79555e79221655c211e9561875c023b"
+    },
+    "email": "singfor7012@gmail.com",
+    "root": "/home/uosai/Desktop/on-policy",
+    "host": "uos-desktop",
+    "username": "uosai",
+    "executable": "/home/uosai/Desktop/miniconda3/envs/marl/bin/python",
+    "cpu_count": 12,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 4458.345458333334,
+        "min": 2200.0,
+        "max": 3700.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4467.59,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3592.465,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3574.189,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3615.87,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4470.186,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3885.375,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4466.724,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4468.698,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4449.58,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4467.582,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4466.587,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4459.426,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4466.621,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3625.638,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3576.752,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3943.484,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4466.664,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3919.778,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4467.587,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4466.769,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4459.806,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4467.401,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4467.818,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4441.585,
+            "min": 2200.0,
+            "max": 3700.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 233.17998886108398,
+            "used": 187.14175415039062
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3080",
+    "gpu_count": 2,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3080",
+            "memory_total": 10737418240
+        },
+        {
+            "name": "NVIDIA GeForce RTX 3080",
+            "memory_total": 10737418240
+        }
+    ],
+    "memory": {
+        "total": 62.70906448364258
+    }
+}

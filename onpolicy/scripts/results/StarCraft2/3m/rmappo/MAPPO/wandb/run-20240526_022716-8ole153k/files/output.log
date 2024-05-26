@@ -1,0 +1,292 @@
+/home/uosai/Desktop/on-policy/onpolicy/envs/starcraft2/StarCraft2_Env.py:462: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  actions_int = [int(a) for a in actions]
+/home/uosai/Desktop/miniconda3/envs/marl/lib/python3.9/site-packages/wandb/util.py:449: DeprecationWarning:
+Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
+(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
+but was not found to be installed on your system.
+If this would cause problems for you,
+please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
+  import pandas as pd
+ Map 3m Algo rmappo Exp MAPPO updates 0/20000 episodes, total num timesteps 100/2000000, FPS 64.
+incre win rate is 0.0.
+eval win rate is 0.0.
+/home/uosai/Desktop/on-policy/onpolicy/envs/starcraft2/StarCraft2_Env.py:462: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  actions_int = [int(a) for a in actions]
+ Map 3m Algo rmappo Exp MAPPO updates 10/20000 episodes, total num timesteps 1100/2000000, FPS 57.
+incre win rate is 0.0.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 20/20000 episodes, total num timesteps 2100/2000000, FPS 66.
+incre win rate is 0.0.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 30/20000 episodes, total num timesteps 3100/2000000, FPS 70.
+incre win rate is 0.023255813953488372.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 40/20000 episodes, total num timesteps 4100/2000000, FPS 73.
+incre win rate is 0.05405405405405406.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 50/20000 episodes, total num timesteps 5100/2000000, FPS 74.
+incre win rate is 0.17073170731707318.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 60/20000 episodes, total num timesteps 6100/2000000, FPS 75.
+incre win rate is 0.18604651162790697.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 70/20000 episodes, total num timesteps 7100/2000000, FPS 76.
+incre win rate is 0.09523809523809523.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 80/20000 episodes, total num timesteps 8100/2000000, FPS 76.
+incre win rate is 0.07317073170731707.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 90/20000 episodes, total num timesteps 9100/2000000, FPS 77.
+incre win rate is 0.14634146341463414.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 100/20000 episodes, total num timesteps 10100/2000000, FPS 77.
+incre win rate is 0.023255813953488372.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 110/20000 episodes, total num timesteps 11100/2000000, FPS 77.
+incre win rate is 0.08695652173913043.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 120/20000 episodes, total num timesteps 12100/2000000, FPS 77.
+incre win rate is 0.15555555555555556.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 130/20000 episodes, total num timesteps 13100/2000000, FPS 77.
+incre win rate is 0.20833333333333334.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 140/20000 episodes, total num timesteps 14100/2000000, FPS 77.
+incre win rate is 0.1590909090909091.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 150/20000 episodes, total num timesteps 15100/2000000, FPS 77.
+incre win rate is 0.24444444444444444.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 160/20000 episodes, total num timesteps 16100/2000000, FPS 77.
+incre win rate is 0.075.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 170/20000 episodes, total num timesteps 17100/2000000, FPS 77.
+incre win rate is 0.175.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 180/20000 episodes, total num timesteps 18100/2000000, FPS 77.
+incre win rate is 0.025.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 190/20000 episodes, total num timesteps 19100/2000000, FPS 77.
+incre win rate is 0.21951219512195122.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 200/20000 episodes, total num timesteps 20100/2000000, FPS 77.
+incre win rate is 0.175.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 210/20000 episodes, total num timesteps 21100/2000000, FPS 77.
+incre win rate is 0.325.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 220/20000 episodes, total num timesteps 22100/2000000, FPS 78.
+incre win rate is 0.15.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 230/20000 episodes, total num timesteps 23100/2000000, FPS 78.
+incre win rate is 0.10256410256410256.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 240/20000 episodes, total num timesteps 24100/2000000, FPS 78.
+incre win rate is 0.13157894736842105.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 250/20000 episodes, total num timesteps 25100/2000000, FPS 78.
+incre win rate is 0.24390243902439024.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 260/20000 episodes, total num timesteps 26100/2000000, FPS 78.
+incre win rate is 0.23076923076923078.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 270/20000 episodes, total num timesteps 27100/2000000, FPS 78.
+incre win rate is 0.425.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 280/20000 episodes, total num timesteps 28100/2000000, FPS 78.
+incre win rate is 0.21052631578947367.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 290/20000 episodes, total num timesteps 29100/2000000, FPS 78.
+incre win rate is 0.13157894736842105.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 300/20000 episodes, total num timesteps 30100/2000000, FPS 78.
+incre win rate is 0.3076923076923077.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 310/20000 episodes, total num timesteps 31100/2000000, FPS 78.
+incre win rate is 0.05.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 320/20000 episodes, total num timesteps 32100/2000000, FPS 78.
+incre win rate is 0.28205128205128205.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 330/20000 episodes, total num timesteps 33100/2000000, FPS 78.
+incre win rate is 0.16666666666666666.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 340/20000 episodes, total num timesteps 34100/2000000, FPS 78.
+incre win rate is 0.3333333333333333.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 350/20000 episodes, total num timesteps 35100/2000000, FPS 77.
+incre win rate is 0.08333333333333333.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 360/20000 episodes, total num timesteps 36100/2000000, FPS 77.
+incre win rate is 0.23809523809523808.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 370/20000 episodes, total num timesteps 37100/2000000, FPS 77.
+incre win rate is 0.046511627906976744.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 380/20000 episodes, total num timesteps 38100/2000000, FPS 77.
+incre win rate is 0.047619047619047616.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 390/20000 episodes, total num timesteps 39100/2000000, FPS 77.
+incre win rate is 0.022727272727272728.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 400/20000 episodes, total num timesteps 40100/2000000, FPS 77.
+incre win rate is 0.022222222222222223.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 410/20000 episodes, total num timesteps 41100/2000000, FPS 77.
+incre win rate is 0.04878048780487805.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 420/20000 episodes, total num timesteps 42100/2000000, FPS 77.
+incre win rate is 0.1.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 430/20000 episodes, total num timesteps 43100/2000000, FPS 77.
+incre win rate is 0.14285714285714285.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 440/20000 episodes, total num timesteps 44100/2000000, FPS 77.
+incre win rate is 0.16279069767441862.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 450/20000 episodes, total num timesteps 45100/2000000, FPS 77.
+incre win rate is 0.07142857142857142.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 460/20000 episodes, total num timesteps 46100/2000000, FPS 77.
+incre win rate is 0.20930232558139536.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 470/20000 episodes, total num timesteps 47100/2000000, FPS 77.
+incre win rate is 0.10869565217391304.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 480/20000 episodes, total num timesteps 48100/2000000, FPS 77.
+incre win rate is 0.0.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 490/20000 episodes, total num timesteps 49100/2000000, FPS 77.
+incre win rate is 0.0.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 500/20000 episodes, total num timesteps 50100/2000000, FPS 77.
+incre win rate is 0.20930232558139536.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 510/20000 episodes, total num timesteps 51100/2000000, FPS 77.
+incre win rate is 0.10526315789473684.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 520/20000 episodes, total num timesteps 52100/2000000, FPS 77.
+incre win rate is 0.18181818181818182.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 530/20000 episodes, total num timesteps 53100/2000000, FPS 77.
+incre win rate is 0.11363636363636363.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 540/20000 episodes, total num timesteps 54100/2000000, FPS 77.
+incre win rate is 0.23255813953488372.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 550/20000 episodes, total num timesteps 55100/2000000, FPS 77.
+incre win rate is 0.23809523809523808.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 560/20000 episodes, total num timesteps 56100/2000000, FPS 77.
+incre win rate is 0.0975609756097561.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 570/20000 episodes, total num timesteps 57100/2000000, FPS 77.
+incre win rate is 0.0.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 580/20000 episodes, total num timesteps 58100/2000000, FPS 77.
+incre win rate is 0.21428571428571427.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 590/20000 episodes, total num timesteps 59100/2000000, FPS 77.
+incre win rate is 0.20512820512820512.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 600/20000 episodes, total num timesteps 60100/2000000, FPS 77.
+incre win rate is 0.21951219512195122.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 610/20000 episodes, total num timesteps 61100/2000000, FPS 77.
+incre win rate is 0.18604651162790697.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 620/20000 episodes, total num timesteps 62100/2000000, FPS 77.
+incre win rate is 0.16279069767441862.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 630/20000 episodes, total num timesteps 63100/2000000, FPS 77.
+incre win rate is 0.23809523809523808.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 640/20000 episodes, total num timesteps 64100/2000000, FPS 77.
+incre win rate is 0.05263157894736842.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 650/20000 episodes, total num timesteps 65100/2000000, FPS 77.
+incre win rate is 0.15384615384615385.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 660/20000 episodes, total num timesteps 66100/2000000, FPS 77.
+incre win rate is 0.5.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 670/20000 episodes, total num timesteps 67100/2000000, FPS 77.
+incre win rate is 0.5238095238095238.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 680/20000 episodes, total num timesteps 68100/2000000, FPS 77.
+incre win rate is 0.5641025641025641.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 690/20000 episodes, total num timesteps 69100/2000000, FPS 77.
+incre win rate is 0.2926829268292683.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 700/20000 episodes, total num timesteps 70100/2000000, FPS 77.
+incre win rate is 0.675.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 710/20000 episodes, total num timesteps 71100/2000000, FPS 77.
+incre win rate is 0.6444444444444445.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 720/20000 episodes, total num timesteps 72100/2000000, FPS 77.
+incre win rate is 0.575.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 730/20000 episodes, total num timesteps 73100/2000000, FPS 77.
+incre win rate is 0.7045454545454546.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 740/20000 episodes, total num timesteps 74100/2000000, FPS 77.
+incre win rate is 0.6585365853658537.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 750/20000 episodes, total num timesteps 75100/2000000, FPS 77.
+incre win rate is 0.7272727272727273.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 760/20000 episodes, total num timesteps 76100/2000000, FPS 77.
+incre win rate is 0.7073170731707317.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 770/20000 episodes, total num timesteps 77100/2000000, FPS 77.
+incre win rate is 0.5.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 780/20000 episodes, total num timesteps 78100/2000000, FPS 77.
+incre win rate is 0.6842105263157895.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 790/20000 episodes, total num timesteps 79100/2000000, FPS 77.
+incre win rate is 0.5142857142857142.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 800/20000 episodes, total num timesteps 80100/2000000, FPS 77.
+incre win rate is 0.5128205128205128.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 810/20000 episodes, total num timesteps 81100/2000000, FPS 77.
+incre win rate is 0.6153846153846154.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 820/20000 episodes, total num timesteps 82100/2000000, FPS 77.
+incre win rate is 0.5945945945945946.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 830/20000 episodes, total num timesteps 83100/2000000, FPS 77.
+incre win rate is 0.6.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 840/20000 episodes, total num timesteps 84100/2000000, FPS 77.
+incre win rate is 0.7142857142857143.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 850/20000 episodes, total num timesteps 85100/2000000, FPS 77.
+incre win rate is 0.6.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 860/20000 episodes, total num timesteps 86100/2000000, FPS 77.
+incre win rate is 0.7.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 870/20000 episodes, total num timesteps 87100/2000000, FPS 77.
+incre win rate is 0.631578947368421.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 880/20000 episodes, total num timesteps 88100/2000000, FPS 77.
+incre win rate is 0.6578947368421053.
+eval win rate is 0.0.
+ Map 3m Algo rmappo Exp MAPPO updates 890/20000 episodes, total num timesteps 89100/2000000, FPS 77.
+incre win rate is 0.525.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 900/20000 episodes, total num timesteps 90100/2000000, FPS 77.
+incre win rate is 0.5555555555555556.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 910/20000 episodes, total num timesteps 91100/2000000, FPS 77.
+incre win rate is 0.6341463414634146.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 920/20000 episodes, total num timesteps 92100/2000000, FPS 77.
+incre win rate is 0.55.
+eval win rate is 1.0.
+ Map 3m Algo rmappo Exp MAPPO updates 930/20000 episodes, total num timesteps 93100/2000000, FPS 77.
+incre win rate is 0.55.

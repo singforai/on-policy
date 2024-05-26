@@ -1,3 +1,5 @@
+import copy
+import wandb
 import torch
 
 import numpy as np
@@ -5,142 +7,108 @@ import matplotlib.pyplot as plt
 
 from sklearn.decomposition import PCA
 
-
-class K_Means_Clustering:
-    def __init__(self, episode_length, num_clusters, device, len_share_obs):
-        self.episode_length = episode_length
-        self.num_clusters = num_clusters
+class K_Means_plus2_Clustering:
+    def __init__(self, device, use_wandb, num_agents, num_clusters, clutering_max_iter, memory_size, decay_rate):
+        
         self.device = device
-        self.len_share_obs = len_share_obs
+        
+        self.use_wandb: bool = use_wandb
+        self.num_agents = num_agents
+
+        self.num_clusters: int = num_clusters
+        self.memory_size: int = memory_size
+        self.clutering_max_iter: int = clutering_max_iter
+        self.nth_clustering: int = 0
+
+        self.decay_rate: float = decay_rate
+        #self.standard_factor: float = 0.5
+
+        self.feature_memory = []
+        self.reward_memory = []
+
         self.centroids = [None for _ in range(self.num_clusters)]
 
+        self.centroids_max_R = np.array([float("-inf") for _ in range(self.num_clusters)])
 
-    def init_centroids(self, share_obs_set):
-        episode_length, n_features = share_obs_set.shape 
-
-        first_centroids_idx = torch.randint(0, episode_length, (1,))
-        self.centroids[0] = share_obs_set[first_centroids_idx]
+    
+    def init_centroids(self):
+        centorid0_idx = torch.randint(0, self.memory_size, (1,))
+        self.centroids[0] = self.feature_memory[centorid0_idx]
 
         for idx in range(1, self.num_clusters):
             distances = []
-            for point in share_obs_set:
-                distances.append(np.sum((point - self.centroids[idx-1])**2, axis=0))
-            
+            for point in self.feature_memory:
+                distances.append(torch.sum(input = ((point - self.centroids[idx-1])**2), dim = 0, keepdim=False))
             while True:
-                next_centroid_idx = np.random.choice(len(share_obs_set), p=distances/np.sum(distances))
-                if not any(np.array_equal(share_obs_set[next_centroid_idx], centroid) for centroid in self.centroids[:idx]):
-                    self.centroids[idx] = share_obs_set[next_centroid_idx]
+                next_centroid_idx = np.random.choice(len(self.feature_memory), p = distances/np.sum(distances))
+                if not any(torch.equal(self.feature_memory[next_centroid_idx],centroid) for centroid in self.centroids[:idx]):
+                    self.centroids[idx] = self.feature_memory[next_centroid_idx]
                     break
 
-        self.centroids_max_rewards = [float('-inf') for _ in range(self.num_clusters)]
-    
-    def transform_share_obs(self, share_obs_set):
-        episode_length, n_features = share_obs_set.shape
-        step_share_obs_set = np.zeros((episode_length, n_features + 1))
-
-        for idx, share_obs in enumerate(share_obs_set):
-            step_share_obs_set[idx] = np.append(share_obs, idx/self.episode_length)
-        
-        return step_share_obs_set
-    
-    def distance_weight(self, point, closest_centroid_idx):
-    
-        dist_weight = np.exp(-1/self.num_clusters*np.sqrt(np.sum((self.centroids[closest_centroid_idx] - point)**2)))
-        return dist_weight
-
-    def decision_clusters(self, share_obs_set, rewards_set):
+    def decision_clusters(self):
         self.clusters = [[] for _ in range(self.num_clusters)]
-        for point_idx, point in enumerate(share_obs_set):
-            closest_centroid_idx = np.argmin(np.sqrt(np.sum((point-self.centroids)**2, axis=1)))
+        for point_idx, point in enumerate(self.feature_memory): 
+            closest_centroid_idx = np.argmin(np.sum((np.expand_dims(point, axis=0)-np.array(self.centroids))**2, axis=1))
             self.clusters[closest_centroid_idx].append(point_idx)
+
+            if self.reward_memory[point_idx] > self.centroids_max_R[closest_centroid_idx]:
+                self.centroids_max_R[closest_centroid_idx] = self.reward_memory[point_idx]
             
-            # dist_weight = self.distance_weight(
-            #     point = point,
-            #     closest_centroid_idx = closest_centroid_idx,
-            # )
 
-            if rewards_set[point_idx] > self.centroids_max_rewards[closest_centroid_idx]:
-                self.centroids_max_rewards[closest_centroid_idx] = rewards_set[point_idx]
-
-    def cal_new_centroids(self, share_obs_set):
+    def cal_new_centroids(self):
         for idx, cluster in enumerate(self.clusters):
             if len(cluster) == 0:
                 pass
             else:
-                self.centroids[idx] = np.mean(share_obs_set[cluster], axis=0)
-    
-    def training(self, episode, share_obs_set, rewards_set):
+                self.centroids[idx] = np.mean(np.array(self.feature_memory)[cluster], axis=0)
 
-        #share_obs_set = self.transform_share_obs(share_obs_set = share_obs_set)
-        
-        if episode == 0:
-            self.init_centroids(share_obs_set)
-        
-        self.decision_clusters(
-            share_obs_set = share_obs_set,
-            rewards_set = rewards_set,
-        )
-
-        self.previous_centroids = self.centroids
-
-        self.cal_new_centroids(share_obs_set = share_obs_set)
-
-    def change_rewards(self, rewards, expected_max_rewards):
-
-        if rewards[0][0][0] == expected_max_rewards:
-            return rewards
-        else:
-            return rewards - expected_max_rewards
-
-    def predict_cluster(self, share_obs, rewards):
+    def predict_cluster(self, input_feature, rewards):
         distances = []
         for centroid in self.centroids:
-            distances.append(np.sum((share_obs - centroid)**2))
+            distances.append(torch.sum((input_feature - torch.tensor(centroid))**2))
         closest_centroid_idx = torch.argmin(torch.tensor(distances))
+        print(closest_centroid_idx)
 
-        expected_max_rewards = self.centroids_max_rewards[closest_centroid_idx]
+        if rewards[0][0][0] == self.centroids_max_R[closest_centroid_idx]:
+            pass
+        else:
+            rewards = rewards - self.centroids_max_R[closest_centroid_idx]
 
-        shaped_rewards = self.change_rewards(
-            rewards = rewards, 
-            expected_max_rewards = expected_max_rewards
-        )
-
-        return shaped_rewards
+        return rewards
     
-    def visualize_clusters(self, episode, share_obs_set):
-        pca = PCA(n_components=2)
-        pca_share_obs = pca.fit_transform(share_obs_set)
-        pca_centroids = pca.fit_transform(self.centroids)
 
-        colors = []
-        for _ in range(self.num_clusters):
-            color = "#{:06x}".format(np.random.randint(0, 0xFFFFFF))
-            colors.append(color)
-    
-        for idx, cluster in enumerate(self.clusters):
-            if len(cluster) > 0:
-                points = pca_share_obs[cluster]
-                plt.scatter(points[:, 0], points[:, 1], s = 100, color = colors[idx], label=f'Cluster-{idx}')
+    def checking(self, total_num_steps, rewards):
+        if self.nth_clustering >= 10:
+            shaped_rewards = self.predict_cluster(
+                input_feature = self.feature_memory[-1],
+                rewards = rewards
+            )
+        else:
+            shaped_rewards = [[[self.reward_memory[-1]] for _ in range(self.num_agents)]]
+
+        if len(self.feature_memory) >= self.memory_size:
+            if self.nth_clustering == 0:
+                self.init_centroids()
+
+            for _ in range(self.clutering_max_iter):
+
+                self.decision_clusters()
+                self.previous_centroids = copy.deepcopy(self.centroids)
+                self.cal_new_centroids()
+                
+                diff = np.sqrt(np.sum((np.array(self.previous_centroids) - np.array(self.centroids))**2))
+                if diff < 0.1:
+                    break
+
+            # self.change_centroid_minmax_R(nth_clustering = self.nth_clustering)
+            # self.cal_reward_shaping()
+            
+            self.feature_memory.clear()
+            self.reward_memory.clear()
+            self.nth_clustering += 1
+            if self.use_wandb:
+                wandb.log({"average_shape_value": np.mean(np.array(self.centroids_max_R))}, step=total_num_steps)
         
-            plt.scatter(pca_centroids[idx, 0], pca_centroids[idx, 1], s = 200 ,color = colors[idx], marker='X', label=f'Centroids-{idx}')
-            
-        plt.title(f'K-Means Clusters with PCA - {episode}')
-        plt.legend(scatterpoints=1, markerscale=2, fontsize=16)
-        plt.show()
+        return np.array(shaped_rewards)
 
 
-
-class Reward_Function:
-
-    def __init__(self, num_clusters, device, episode_length, share_obs):
-        self.num_clusters = num_clusters
-        self.device = device
-        self.len_share_obs = len(share_obs)
-
-        self.clustering = K_Means_Clustering(
-            episode_length = episode_length,
-            num_clusters = self.num_clusters, 
-            device = self.device, 
-            len_share_obs = self.len_share_obs
-            
-        )

@@ -5,8 +5,7 @@ import torch
 from tensorboardX import SummaryWriter
 from onpolicy.utils.shared_buffer import SharedReplayBuffer
 
-from onpolicy.utils.util import get_shape_from_obs_space
-
+from onpolicy.runner.shared._reward_function import K_Means_plus2_Clustering
 
 def _t2n(x):
     """Convert torch tensor to a numpy array."""
@@ -57,10 +56,7 @@ class Runner(object):
 
         #reward shaping
         self.use_reward_shaping = self.all_args.use_reward_shaping
-        self.visual_cluster_interval = self.all_args.visual_cluster_interval
-        self.num_clusters = self.all_args.num_clusters
-        self.use_visual_cluster = self.all_args.use_visual_cluster
-        self.cluster_update_interval: int = self.all_args.cluster_update_interval
+
 
         if self.use_wandb:
             self.save_dir = str(wandb.run.dir)
@@ -123,9 +119,28 @@ class Runner(object):
             self.envs.action_space[0],
         )
 
-        share_obs_shape = get_shape_from_obs_space(share_observation_space)
-        if type(share_obs_shape[-1]) == list:
-            share_obs_shape = share_obs_shape[:1]
+
+        if self.use_reward_shaping:
+
+            self.num_clusters = self.all_args.num_clusters
+            self.memory_size = self.all_args.memory_size
+            self.clutering_max_iter = self.all_args.clutering_max_iter
+            self.decay_rate = self.all_args.decay_rate
+            # self.visual_cluster_interval = self.all_args.visual_cluster_interval
+            # self.use_visual_cluster = self.all_args.use_visual_cluster
+            # self.cluster_update_interval: int = self.all_args.cluster_update_interval
+
+            self.reward_shaping = K_Means_plus2_Clustering(
+                device = self.device, 
+                use_wandb = self.use_wandb,
+                num_agents = self.num_agents,
+                num_clusters = self.num_clusters,
+                clutering_max_iter = self.clutering_max_iter,
+                memory_size = self.memory_size, 
+                decay_rate = self.decay_rate,
+            )
+
+
 
     def run(self):
         """Collect training data, perform training updates, and evaluate policy."""
@@ -218,4 +233,5 @@ class Runner(object):
                     wandb.log({k: np.mean(v)}, step=total_num_steps)
                 else:
                     self.writter.add_scalars(k, {k: np.mean(v)}, total_num_steps)
+
 

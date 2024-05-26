@@ -155,38 +155,38 @@ def get_config():
     """
     parser = argparse.ArgumentParser(description="onpolicy", formatter_class=argparse.RawDescriptionHelpFormatter)
 
-
-    parser.add_argument(
-        "--num_clusters",
-        type = int,
-        default= 10,
-        help="share_obs에 대해서 clustering을 수행함.",
-    )
-    parser.add_argument(
-        "--visual_cluster_interval",
-        type = int,
-        default= 200,
-        help="cluster를 시각화하는 간격",
-    )
-    parser.add_argument(
-        "--use_visual_cluster",
-        action = "store_false",
-        default= True,
-        help="cluster를 시각화할 것인가?",
-    )
-    parser.add_argument(
-        "--cluster_update_interval",
-        type = int,
-        default= 1,
-        help="K-means clustering을 업데이트하는 에피소드 간격",
-        
-    )
     parser.add_argument(
         "--use_reward_shaping",
         action="store_false",
         default=True,
         help="추가적인 Reward_function을 활용할 것인지",
     )
+    parser.add_argument(
+        "--num_clusters",
+        type = int,
+        default= 10,
+        help="share_obs에 대해서 clustering을 수행함.",
+    )
+
+    parser.add_argument(
+        "--memory_size",
+        type = int,
+        default= 100,
+        help="K-means clustering memory에 저장되는 point 개수"
+    )
+    parser.add_argument(
+        "--clutering_max_iter",
+        type = int,
+        default= 1,
+        help="clustering마다 훈련 횟수",
+    )
+    parser.add_argument(
+        "--decay_rate",
+        type = int,
+        default= 1,
+        help="centroids max/min rewards",
+    )
+
 
     # prepare parameters
     parser.add_argument(

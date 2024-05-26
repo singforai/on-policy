@@ -54,5 +54,4 @@ class MLPBase(nn.Module):
             x = self.feature_norm(x)
 
         x = self.mlp(x)
-
         return x
