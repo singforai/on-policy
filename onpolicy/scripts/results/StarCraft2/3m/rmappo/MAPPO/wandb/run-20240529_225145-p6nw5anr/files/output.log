@@ -1,0 +1,25 @@
+Sampling:   0%|          | 0/100 [00:00<?, ?it/s]/home/uosai/Desktop/on-policy/onpolicy/envs/starcraft2/StarCraft2_Env.py:462: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  actions_int = [int(a) for a in actions]
+Sampling:   1%|          | 1/100 [00:01<02:54,  1.76s/it]
+Traceback (most recent call last):
+  File "/home/uosai/Desktop/on-policy/onpolicy/scripts/train/train_smac.py", line 290, in <module>
+    main(sys.argv[1:])
+  File "/home/uosai/Desktop/on-policy/onpolicy/scripts/train/train_smac.py", line 275, in main
+    runner.run()
+  File "/home/uosai/Desktop/on-policy/onpolicy/runner/shared/smac_runner.py", line 57, in run
+    self.warmup()
+  File "/home/uosai/Desktop/on-policy/onpolicy/runner/shared/smac_runner.py", line 203, in warmup
+    self.sampling()
+  File "/home/uosai/Desktop/on-policy/onpolicy/runner/shared/smac_runner.py", line 30, in sampling
+    obs, share_obs, rewards, dones, infos, available_actions = self.envs.step(actions)
+  File "/home/uosai/Desktop/on-policy/onpolicy/envs/env_wrappers.py", line 110, in step
+    return self.step_wait()
+  File "/home/uosai/Desktop/on-policy/onpolicy/envs/env_wrappers.py", line 717, in step_wait
+    results = [env.step(a) for (a, env) in zip(self.actions, self.envs)]
+  File "/home/uosai/Desktop/on-policy/onpolicy/envs/env_wrappers.py", line 717, in <listcomp>
+    results = [env.step(a) for (a, env) in zip(self.actions, self.envs)]
+  File "/home/uosai/Desktop/on-policy/onpolicy/envs/starcraft2/StarCraft2_Env.py", line 473, in step
+    sc_action = self.get_agent_action(a_id, action)
+  File "/home/uosai/Desktop/on-policy/onpolicy/envs/starcraft2/StarCraft2_Env.py", line 622, in get_agent_action
+    assert avail_actions[action] == 1, \
+AssertionError: Agent 0 cannot perform action 2

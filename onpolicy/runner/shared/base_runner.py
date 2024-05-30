@@ -57,10 +57,13 @@ class Runner(object):
 
         #reward shaping
         self.use_reward_shaping = self.all_args.use_reward_shaping
+        self.num_ensemble = self.all_args.num_ensemble
         self.visual_cluster_interval = self.all_args.visual_cluster_interval
         self.num_clusters = self.all_args.num_clusters
         self.use_visual_cluster = self.all_args.use_visual_cluster
         self.cluster_update_interval: int = self.all_args.cluster_update_interval
+        self.sampling_episodes: int = self.all_args.sampling_episodes
+        self.seed: int = self.all_args.seed
 
         if self.use_wandb:
             self.save_dir = str(wandb.run.dir)

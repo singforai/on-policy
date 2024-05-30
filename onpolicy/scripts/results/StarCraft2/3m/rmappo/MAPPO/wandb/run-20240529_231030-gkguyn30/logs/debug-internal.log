@@ -1,0 +1,429 @@
+2024-05-29 23:10:30,360 INFO    StreamThr :496090 [internal.py:wandb_internal():86] W&B internal server running at pid: 496090, started at: 2024-05-29 23:10:30.360404
+2024-05-29 23:10:30,361 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status
+2024-05-29 23:10:30,364 INFO    WriterThread:496090 [datastore.py:open_for_write():87] open: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/run-gkguyn30.wandb
+2024-05-29 23:10:30,365 DEBUG   SenderThread:496090 [sender.py:send():382] send: header
+2024-05-29 23:10:30,385 DEBUG   SenderThread:496090 [sender.py:send():382] send: run
+2024-05-29 23:10:30,924 INFO    SenderThread:496090 [dir_watcher.py:__init__():211] watching files in: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files
+2024-05-29 23:10:30,924 INFO    SenderThread:496090 [sender.py:_start_run_threads():1136] run started: gkguyn30 with start time 1716991830.359912
+2024-05-29 23:10:30,936 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: check_version
+2024-05-29 23:10:30,937 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: check_version
+2024-05-29 23:10:31,000 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: run_start
+2024-05-29 23:10:31,014 DEBUG   HandlerThread:496090 [system_info.py:__init__():27] System info init
+2024-05-29 23:10:31,014 DEBUG   HandlerThread:496090 [system_info.py:__init__():42] System info init done
+2024-05-29 23:10:31,014 INFO    HandlerThread:496090 [system_monitor.py:start():194] Starting system monitor
+2024-05-29 23:10:31,014 INFO    SystemMonitor:496090 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-29 23:10:31,014 INFO    HandlerThread:496090 [system_monitor.py:probe():214] Collecting system info
+2024-05-29 23:10:31,014 INFO    SystemMonitor:496090 [interfaces.py:start():190] Started cpu monitoring
+2024-05-29 23:10:31,015 INFO    SystemMonitor:496090 [interfaces.py:start():190] Started disk monitoring
+2024-05-29 23:10:31,016 INFO    SystemMonitor:496090 [interfaces.py:start():190] Started gpu monitoring
+2024-05-29 23:10:31,019 INFO    SystemMonitor:496090 [interfaces.py:start():190] Started memory monitoring
+2024-05-29 23:10:31,020 INFO    SystemMonitor:496090 [interfaces.py:start():190] Started network monitoring
+2024-05-29 23:10:31,039 DEBUG   HandlerThread:496090 [system_info.py:probe():151] Probing system
+2024-05-29 23:10:31,049 DEBUG   HandlerThread:496090 [system_info.py:_probe_git():136] Probing git
+2024-05-29 23:10:31,071 DEBUG   HandlerThread:496090 [system_info.py:_probe_git():144] Probing git done
+2024-05-29 23:10:31,074 DEBUG   HandlerThread:496090 [system_info.py:probe():199] Probing system done
+2024-05-29 23:10:31,074 DEBUG   HandlerThread:496090 [system_monitor.py:probe():223] {'os': 'Linux-6.5.0-35-generic-x86_64-with-glibc2.35', 'python': '3.9.18', 'heartbeatAt': '2024-05-29T14:10:31.039954', 'startedAt': '2024-05-29T14:10:30.354672', 'docker': None, 'cuda': None, 'args': ('--seed', '923', '--env_name', 'StarCraft2', '--experiment_name', 'MAPPO', '--group_name', 'deep100_c20', '--num_clusters', '20', '--map_name', '3m', '--num_ensemble', '1', '--cluster_update_interval', '1', '--num_env_steps', '2000000', '--sampling_episodes', '100', '--num_gpu', '0'), 'state': 'running', 'program': '/home/uosai/Desktop/on-policy/onpolicy/scripts/train/train_smac.py', 'codePathLocal': 'train_smac.py', 'codePath': 'onpolicy/scripts/train/train_smac.py', 'git': {'remote': 'https://github.com/singforai/on-policy.git', 'commit': '14d4b373e79555e79221655c211e9561875c023b'}, 'email': 'singfor7012@gmail.com', 'root': '/home/uosai/Desktop/on-policy', 'host': 'uos-desktop', 'username': 'uosai', 'executable': '/home/uosai/Desktop/miniconda3/envs/marl/bin/python', 'cpu_count': 12, 'cpu_count_logical': 24, 'cpu_freq': {'current': 4241.948583333334, 'min': 2200.0, 'max': 3700.0}, 'cpu_freq_per_core': [{'current': 4259.336, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.527, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.522, 'min': 2200.0, 'max': 3700.0}, {'current': 4267.975, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.513, 'min': 2200.0, 'max': 3700.0}, {'current': 4245.773, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.536, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.519, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.507, 'min': 2200.0, 'max': 3700.0}, {'current': 4261.078, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.524, 'min': 2200.0, 'max': 3700.0}, {'current': 4242.117, 'min': 2200.0, 'max': 3700.0}, {'current': 4227.343, 'min': 2200.0, 'max': 3700.0}, {'current': 4218.781, 'min': 2200.0, 'max': 3700.0}, {'current': 4218.805, 'min': 2200.0, 'max': 3700.0}, {'current': 4218.8, 'min': 2200.0, 'max': 3700.0}, {'current': 4218.791, 'min': 2200.0, 'max': 3700.0}, {'current': 4218.812, 'min': 2200.0, 'max': 3700.0}, {'current': 4211.784, 'min': 2200.0, 'max': 3700.0}, {'current': 4218.832, 'min': 2200.0, 'max': 3700.0}, {'current': 4218.812, 'min': 2200.0, 'max': 3700.0}, {'current': 4218.766, 'min': 2200.0, 'max': 3700.0}, {'current': 4218.822, 'min': 2200.0, 'max': 3700.0}, {'current': 4218.803, 'min': 2200.0, 'max': 3700.0}], 'disk': {'/': {'total': 233.17998886108398, 'used': 190.5708770751953}}, 'gpu': 'NVIDIA GeForce RTX 3080', 'gpu_count': 2, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3080', 'memory_total': 10737418240}, {'name': 'NVIDIA GeForce RTX 3080', 'memory_total': 10737418240}], 'memory': {'total': 62.709049224853516}}
+2024-05-29 23:10:31,074 INFO    HandlerThread:496090 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-29 23:10:31,074 INFO    HandlerThread:496090 [system_monitor.py:probe():227] Publishing system info
+2024-05-29 23:10:31,074 DEBUG   HandlerThread:496090 [system_info.py:_save_conda():208] Saving list of conda packages installed into the current environment
+2024-05-29 23:10:31,926 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/conda-environment.yaml
+2024-05-29 23:10:33,838 DEBUG   HandlerThread:496090 [system_info.py:_save_conda():220] Saving conda packages done
+2024-05-29 23:10:33,839 INFO    HandlerThread:496090 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-29 23:10:33,841 DEBUG   SenderThread:496090 [sender.py:send():382] send: files
+2024-05-29 23:10:33,842 INFO    SenderThread:496090 [sender.py:_save_file():1403] saving file wandb-metadata.json with policy now
+2024-05-29 23:10:33,848 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: python_packages
+2024-05-29 23:10:33,849 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: python_packages
+2024-05-29 23:10:33,850 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:10:33,850 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:10:33,852 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:10:33,925 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/conda-environment.yaml
+2024-05-29 23:10:33,925 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/wandb-metadata.json
+2024-05-29 23:10:33,925 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/requirements.txt
+2024-05-29 23:10:34,094 DEBUG   SenderThread:496090 [sender.py:send():382] send: telemetry
+2024-05-29 23:10:34,671 INFO    wandb-upload_0:496090 [upload_job.py:push():131] Uploaded file /tmp/tmpxlqwy952wandb/oaewxai6-wandb-metadata.json
+2024-05-29 23:10:34,758 DEBUG   SenderThread:496090 [sender.py:send():382] send: telemetry
+2024-05-29 23:10:34,964 DEBUG   SenderThread:496090 [sender.py:send():382] send: telemetry
+2024-05-29 23:10:35,965 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:10:40,966 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:10:41,927 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:10:43,928 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:10:45,928 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:10:46,600 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:10:47,929 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:10:48,850 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:10:48,851 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:10:48,852 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:10:49,930 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:10:51,659 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:10:51,930 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:10:53,931 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:10:55,931 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:10:57,555 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:10:57,932 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:10:59,620 INFO    FileStreamThread:496090 [file_stream.py:request_with_retry():666] Filestream rate limit exceeded, retrying in 2.0 seconds. 
+2024-05-29 23:10:59,933 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:01,933 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:02,621 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:11:02,933 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/config.yaml
+2024-05-29 23:11:03,850 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:11:03,851 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:11:03,853 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:11:03,934 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:05,934 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:07,935 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:08,507 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:11:09,935 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:11,936 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:13,631 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:11:13,937 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:15,938 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:17,938 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:18,851 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:11:18,851 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:11:18,853 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:11:19,087 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:11:19,939 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:21,940 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:23,941 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:24,389 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:11:25,941 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:27,942 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:29,592 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:11:29,666 INFO    FileStreamThread:496090 [file_stream.py:request_with_retry():666] Filestream rate limit exceeded, retrying in 2.4 seconds. 
+2024-05-29 23:11:29,942 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:31,021 DEBUG   SystemMonitor:496090 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-29 23:11:31,022 DEBUG   SenderThread:496090 [sender.py:send():382] send: stats
+2024-05-29 23:11:31,943 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:33,851 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:11:33,851 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:11:33,853 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:11:33,943 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:35,453 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:11:35,944 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:37,945 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:39,945 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:40,499 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:11:41,946 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:43,946 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:45,947 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:46,366 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:11:47,947 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:48,852 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:11:48,852 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:11:48,854 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:11:49,948 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:51,466 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:11:51,949 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:53,949 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:55,950 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:57,374 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:11:57,950 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:11:59,951 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:01,023 DEBUG   SenderThread:496090 [sender.py:send():382] send: stats
+2024-05-29 23:12:01,952 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:02,569 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:12:03,852 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:12:03,852 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:12:03,854 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:12:03,953 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:05,953 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:07,954 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:08,379 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:12:09,955 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:11,955 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:13,520 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:12:13,956 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:15,956 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:17,957 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:18,852 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:12:18,852 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:12:18,853 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:12:18,854 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:12:19,958 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:21,958 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:23,959 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:24,192 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:12:25,960 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:27,960 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:29,207 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:12:29,961 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:31,024 DEBUG   SenderThread:496090 [sender.py:send():382] send: stats
+2024-05-29 23:12:31,962 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:33,853 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:12:33,853 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:12:33,896 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:12:33,962 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:34,418 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:12:35,963 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:37,963 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:39,964 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:40,321 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:12:41,965 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:43,965 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:45,353 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:12:45,966 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:47,966 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:48,852 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:12:48,852 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:12:48,854 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:12:49,967 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:50,487 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:12:51,967 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:53,968 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:55,529 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:12:55,969 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:57,969 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:12:59,970 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:00,572 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:13:01,025 DEBUG   SenderThread:496090 [sender.py:send():382] send: stats
+2024-05-29 23:13:01,970 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:03,853 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:13:03,853 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:13:03,855 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:13:03,971 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:05,717 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:13:05,972 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:07,972 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:09,973 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:10,815 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:13:11,973 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:13,974 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:15,945 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:13:15,975 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:17,975 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:18,853 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:13:18,853 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:13:18,896 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:13:19,976 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:20,986 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:13:21,976 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:23,977 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:25,978 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:26,060 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:13:27,978 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:29,979 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:31,026 DEBUG   SenderThread:496090 [sender.py:send():382] send: stats
+2024-05-29 23:13:31,173 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:13:31,979 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:33,853 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:13:33,853 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:13:33,856 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:13:33,981 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:35,981 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:36,274 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:13:37,982 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:39,983 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:41,402 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:13:41,983 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:43,984 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:45,984 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:46,496 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:13:47,985 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:48,853 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:13:48,853 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:13:48,856 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:13:49,985 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:51,696 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:13:51,986 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:53,987 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:55,987 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:56,700 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:13:57,988 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:13:59,989 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:01,027 DEBUG   SenderThread:496090 [sender.py:send():382] send: stats
+2024-05-29 23:14:01,798 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:14:01,989 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:03,854 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:14:03,854 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:14:03,864 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:14:03,990 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:05,990 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:07,038 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:14:07,991 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:09,992 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:11,992 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:12,054 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:14:13,993 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:15,993 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:17,908 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:14:17,994 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:18,854 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:14:18,854 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:14:18,896 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:14:19,995 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:21,995 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:22,990 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:14:23,996 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:25,996 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:27,993 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:14:27,997 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:29,997 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:31,028 DEBUG   SenderThread:496090 [sender.py:send():382] send: stats
+2024-05-29 23:14:31,998 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:33,821 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:14:33,854 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:14:33,854 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:14:33,896 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:14:33,999 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:35,999 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:38,000 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:38,899 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:14:40,000 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:42,001 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:43,947 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:14:44,001 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:46,002 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:48,002 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:48,854 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:14:48,854 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:14:48,900 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:14:49,064 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:14:50,004 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:52,004 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:54,005 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:54,118 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:14:56,007 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:58,006 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:14:59,208 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:15:00,006 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:01,029 DEBUG   SenderThread:496090 [sender.py:send():382] send: stats
+2024-05-29 23:15:02,007 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:03,858 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:15:03,858 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:15:03,900 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:15:04,008 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:04,488 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:15:06,008 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:08,009 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:09,613 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:15:10,009 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:12,010 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:14,011 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:14,792 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:15:16,011 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:18,012 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:18,856 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:15:18,856 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:15:18,904 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:15:19,946 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:15:20,012 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:22,013 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:24,014 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:25,070 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:15:26,014 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:28,015 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:30,015 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:30,202 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:15:31,030 DEBUG   SenderThread:496090 [sender.py:send():382] send: stats
+2024-05-29 23:15:32,016 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:33,856 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:15:33,856 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:15:33,900 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:15:34,017 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:35,424 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:15:36,017 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:38,018 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:40,018 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:40,559 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:15:42,019 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:44,019 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:45,627 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:15:46,020 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:48,021 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:48,856 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:15:48,857 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:15:48,904 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:15:50,021 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:50,749 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:15:52,022 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:54,022 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:55,753 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:15:56,023 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:15:58,023 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:00,024 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:01,031 DEBUG   SenderThread:496090 [sender.py:send():382] send: stats
+2024-05-29 23:16:01,031 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:16:02,025 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:03,856 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:16:03,857 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:16:03,900 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:16:04,025 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:06,026 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:06,604 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:16:08,026 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:10,027 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:11,696 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:16:12,027 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:14,028 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:16,028 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:16,726 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:16:18,029 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:18,857 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:16:18,857 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:16:18,900 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:16:20,031 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:22,030 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:22,577 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:16:24,031 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:26,031 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:27,622 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:16:28,032 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:30,033 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:31,032 DEBUG   SenderThread:496090 [sender.py:send():382] send: stats
+2024-05-29 23:16:32,033 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:32,824 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:16:33,857 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:16:33,858 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:16:33,904 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:16:34,034 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:36,035 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:37,961 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:16:38,035 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:40,036 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:42,036 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:43,048 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:16:44,037 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:46,037 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:48,038 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:48,186 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:16:48,858 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:16:48,858 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:16:48,900 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:16:50,039 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:52,039 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:53,281 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:16:54,040 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:56,040 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:58,041 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:16:58,339 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:17:00,042 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:17:01,034 DEBUG   SenderThread:496090 [sender.py:send():382] send: stats
+2024-05-29 23:17:02,043 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:17:03,513 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:17:03,858 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:17:03,858 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:17:03,900 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:17:04,044 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:17:06,045 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:17:08,046 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:17:08,538 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:17:10,047 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:17:12,048 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:17:13,586 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:17:14,049 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:17:16,050 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:17:18,050 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:17:18,649 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:17:18,858 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 23:17:18,858 DEBUG   SenderThread:496090 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 23:17:18,900 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 23:17:20,051 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:17:22,052 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:17:23,728 DEBUG   HandlerThread:496090 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 23:17:24,053 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:17:26,054 INFO    Thread-12 :496090 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_231030-gkguyn30/files/output.log
+2024-05-29 23:17:27,077 INFO    MainThread:496090 [internal.py:handle_exit():76] Internal process exited
+2024-05-29 23:17:27,109 INFO    memory    :496090 [interfaces.py:monitor():140] Process proc.memory.rssMB has exited.
+2024-05-29 23:17:27,109 DEBUG   SystemMonitor:496090 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-05-29 23:17:27,110 DEBUG   SystemMonitor:496090 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-05-29 23:17:27,111 DEBUG   SenderThread:496090 [sender.py:send():382] send: stats

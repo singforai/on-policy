@@ -1,0 +1,193 @@
+2024-05-29 22:36:40,629 INFO    StreamThr :477968 [internal.py:wandb_internal():86] W&B internal server running at pid: 477968, started at: 2024-05-29 22:36:40.628598
+2024-05-29 22:36:40,630 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: status
+2024-05-29 22:36:40,636 INFO    WriterThread:477968 [datastore.py:open_for_write():87] open: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/run-s028eimi.wandb
+2024-05-29 22:36:40,637 DEBUG   SenderThread:477968 [sender.py:send():382] send: header
+2024-05-29 22:36:40,658 DEBUG   SenderThread:477968 [sender.py:send():382] send: run
+2024-05-29 22:36:41,186 INFO    SenderThread:477968 [dir_watcher.py:__init__():211] watching files in: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files
+2024-05-29 22:36:41,187 INFO    SenderThread:477968 [sender.py:_start_run_threads():1136] run started: s028eimi with start time 1716989800.629617
+2024-05-29 22:36:41,198 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: check_version
+2024-05-29 22:36:41,198 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: check_version
+2024-05-29 22:36:41,261 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: run_start
+2024-05-29 22:36:41,275 DEBUG   HandlerThread:477968 [system_info.py:__init__():27] System info init
+2024-05-29 22:36:41,275 DEBUG   HandlerThread:477968 [system_info.py:__init__():42] System info init done
+2024-05-29 22:36:41,275 INFO    HandlerThread:477968 [system_monitor.py:start():194] Starting system monitor
+2024-05-29 22:36:41,276 INFO    SystemMonitor:477968 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-29 22:36:41,276 INFO    HandlerThread:477968 [system_monitor.py:probe():214] Collecting system info
+2024-05-29 22:36:41,276 INFO    SystemMonitor:477968 [interfaces.py:start():190] Started cpu monitoring
+2024-05-29 22:36:41,278 INFO    SystemMonitor:477968 [interfaces.py:start():190] Started disk monitoring
+2024-05-29 22:36:41,280 INFO    SystemMonitor:477968 [interfaces.py:start():190] Started gpu monitoring
+2024-05-29 22:36:41,282 INFO    SystemMonitor:477968 [interfaces.py:start():190] Started memory monitoring
+2024-05-29 22:36:41,283 INFO    SystemMonitor:477968 [interfaces.py:start():190] Started network monitoring
+2024-05-29 22:36:41,296 DEBUG   HandlerThread:477968 [system_info.py:probe():151] Probing system
+2024-05-29 22:36:41,304 DEBUG   HandlerThread:477968 [system_info.py:_probe_git():136] Probing git
+2024-05-29 22:36:41,325 DEBUG   HandlerThread:477968 [system_info.py:_probe_git():144] Probing git done
+2024-05-29 22:36:41,325 DEBUG   HandlerThread:477968 [system_info.py:probe():199] Probing system done
+2024-05-29 22:36:41,325 DEBUG   HandlerThread:477968 [system_monitor.py:probe():223] {'os': 'Linux-6.5.0-35-generic-x86_64-with-glibc2.35', 'python': '3.9.18', 'heartbeatAt': '2024-05-29T13:36:41.296968', 'startedAt': '2024-05-29T13:36:40.622036', 'docker': None, 'cuda': None, 'args': ('--seed', '92', '--env_name', 'StarCraft2', '--experiment_name', 'MAPPO', '--group_name', 'deep_c20', '--num_clusters', '20', '--map_name', '3m', '--num_ensemble', '1', '--cluster_update_interval', '1', '--num_env_steps', '2000000', '--num_gpu', '1'), 'state': 'running', 'program': '/home/uosai/Desktop/on-policy/onpolicy/scripts/train/train_smac.py', 'codePathLocal': 'train_smac.py', 'codePath': 'onpolicy/scripts/train/train_smac.py', 'git': {'remote': 'https://github.com/singforai/on-policy.git', 'commit': '14d4b373e79555e79221655c211e9561875c023b'}, 'email': 'singfor7012@gmail.com', 'root': '/home/uosai/Desktop/on-policy', 'host': 'uos-desktop', 'username': 'uosai', 'executable': '/home/uosai/Desktop/miniconda3/envs/marl/bin/python', 'cpu_count': 12, 'cpu_count_logical': 24, 'cpu_freq': {'current': 4219.746666666667, 'min': 2200.0, 'max': 3700.0}, 'cpu_freq_per_core': [{'current': 4191.683, 'min': 2200.0, 'max': 3700.0}, {'current': 4198.216, 'min': 2200.0, 'max': 3700.0}, {'current': 4200.446, 'min': 2200.0, 'max': 3700.0}, {'current': 4198.214, 'min': 2200.0, 'max': 3700.0}, {'current': 4198.203, 'min': 2200.0, 'max': 3700.0}, {'current': 4198.207, 'min': 2200.0, 'max': 3700.0}, {'current': 4193.706, 'min': 2200.0, 'max': 3700.0}, {'current': 4198.539, 'min': 2200.0, 'max': 3700.0}, {'current': 4198.215, 'min': 2200.0, 'max': 3700.0}, {'current': 4198.223, 'min': 2200.0, 'max': 3700.0}, {'current': 4198.217, 'min': 2200.0, 'max': 3700.0}, {'current': 4198.219, 'min': 2200.0, 'max': 3700.0}, {'current': 4198.215, 'min': 2200.0, 'max': 3700.0}, {'current': 4198.218, 'min': 2200.0, 'max': 3700.0}, {'current': 4193.451, 'min': 2200.0, 'max': 3700.0}, {'current': 4188.018, 'min': 2200.0, 'max': 3700.0}, {'current': 4197.87, 'min': 2200.0, 'max': 3700.0}, {'current': 4198.211, 'min': 2200.0, 'max': 3700.0}, {'current': 4198.517, 'min': 2200.0, 'max': 3700.0}, {'current': 4198.208, 'min': 2200.0, 'max': 3700.0}, {'current': 4198.218, 'min': 2200.0, 'max': 3700.0}, {'current': 4198.217, 'min': 2200.0, 'max': 3700.0}, {'current': 4198.204, 'min': 2200.0, 'max': 3700.0}, {'current': 4202.332, 'min': 2200.0, 'max': 3700.0}], 'disk': {'/': {'total': 233.17998886108398, 'used': 190.5000877380371}}, 'gpu': 'NVIDIA GeForce RTX 3080', 'gpu_count': 2, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3080', 'memory_total': 10737418240}, {'name': 'NVIDIA GeForce RTX 3080', 'memory_total': 10737418240}], 'memory': {'total': 62.709049224853516}}
+2024-05-29 22:36:41,325 INFO    HandlerThread:477968 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-29 22:36:41,325 INFO    HandlerThread:477968 [system_monitor.py:probe():227] Publishing system info
+2024-05-29 22:36:41,325 DEBUG   HandlerThread:477968 [system_info.py:_save_conda():208] Saving list of conda packages installed into the current environment
+2024-05-29 22:36:42,189 INFO    Thread-12 :477968 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files/conda-environment.yaml
+2024-05-29 22:36:44,042 DEBUG   HandlerThread:477968 [system_info.py:_save_conda():220] Saving conda packages done
+2024-05-29 22:36:44,043 INFO    HandlerThread:477968 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-29 22:36:44,046 DEBUG   SenderThread:477968 [sender.py:send():382] send: files
+2024-05-29 22:36:44,046 INFO    SenderThread:477968 [sender.py:_save_file():1403] saving file wandb-metadata.json with policy now
+2024-05-29 22:36:44,058 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: python_packages
+2024-05-29 22:36:44,060 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: python_packages
+2024-05-29 22:36:44,064 DEBUG   SenderThread:477968 [sender.py:send():382] send: telemetry
+2024-05-29 22:36:44,108 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 22:36:44,108 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 22:36:44,108 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: stop_status
+2024-05-29 22:36:44,188 INFO    Thread-12 :477968 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files/conda-environment.yaml
+2024-05-29 22:36:44,188 INFO    Thread-12 :477968 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files/requirements.txt
+2024-05-29 22:36:44,188 INFO    Thread-12 :477968 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files/wandb-metadata.json
+2024-05-29 22:36:44,865 INFO    wandb-upload_0:477968 [upload_job.py:push():131] Uploaded file /tmp/tmpzcgtyrajwandb/ov1ce15p-wandb-metadata.json
+2024-05-29 22:36:44,973 DEBUG   SenderThread:477968 [sender.py:send():382] send: telemetry
+2024-05-29 22:36:45,186 DEBUG   SenderThread:477968 [sender.py:send():382] send: telemetry
+2024-05-29 22:36:46,186 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 22:36:51,187 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 22:36:52,190 INFO    Thread-12 :477968 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files/output.log
+2024-05-29 22:36:52,465 DEBUG   SenderThread:477968 [sender.py:send():382] send: exit
+2024-05-29 22:36:52,465 INFO    SenderThread:477968 [sender.py:send_exit():589] handling exit code: 1
+2024-05-29 22:36:52,465 INFO    SenderThread:477968 [sender.py:send_exit():591] handling runtime: 11
+2024-05-29 22:36:52,467 INFO    SenderThread:477968 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-29 22:36:52,467 INFO    SenderThread:477968 [sender.py:send_exit():597] send defer
+2024-05-29 22:36:52,468 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: defer
+2024-05-29 22:36:52,468 INFO    HandlerThread:477968 [handler.py:handle_request_defer():172] handle defer: 0
+2024-05-29 22:36:52,468 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: defer
+2024-05-29 22:36:52,468 INFO    SenderThread:477968 [sender.py:send_request_defer():613] handle sender defer: 0
+2024-05-29 22:36:52,468 INFO    SenderThread:477968 [sender.py:transition_state():617] send defer: 1
+2024-05-29 22:36:52,468 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: defer
+2024-05-29 22:36:52,468 INFO    HandlerThread:477968 [handler.py:handle_request_defer():172] handle defer: 1
+2024-05-29 22:36:52,468 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: defer
+2024-05-29 22:36:52,468 INFO    SenderThread:477968 [sender.py:send_request_defer():613] handle sender defer: 1
+2024-05-29 22:36:52,468 INFO    SenderThread:477968 [sender.py:transition_state():617] send defer: 2
+2024-05-29 22:36:52,468 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: defer
+2024-05-29 22:36:52,469 INFO    HandlerThread:477968 [handler.py:handle_request_defer():172] handle defer: 2
+2024-05-29 22:36:52,469 INFO    HandlerThread:477968 [system_monitor.py:finish():203] Stopping system monitor
+2024-05-29 22:36:52,469 DEBUG   SystemMonitor:477968 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-29 22:36:52,469 DEBUG   SystemMonitor:477968 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-05-29 22:36:52,470 DEBUG   SystemMonitor:477968 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-05-29 22:36:52,470 INFO    HandlerThread:477968 [interfaces.py:finish():202] Joined cpu monitor
+2024-05-29 22:36:52,470 INFO    HandlerThread:477968 [interfaces.py:finish():202] Joined disk monitor
+2024-05-29 22:36:52,703 INFO    HandlerThread:477968 [interfaces.py:finish():202] Joined gpu monitor
+2024-05-29 22:36:52,703 INFO    HandlerThread:477968 [interfaces.py:finish():202] Joined memory monitor
+2024-05-29 22:36:52,703 INFO    HandlerThread:477968 [interfaces.py:finish():202] Joined network monitor
+2024-05-29 22:36:52,704 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: defer
+2024-05-29 22:36:52,704 INFO    SenderThread:477968 [sender.py:send_request_defer():613] handle sender defer: 2
+2024-05-29 22:36:52,704 INFO    SenderThread:477968 [sender.py:transition_state():617] send defer: 3
+2024-05-29 22:36:52,704 DEBUG   SenderThread:477968 [sender.py:send():382] send: stats
+2024-05-29 22:36:52,704 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: defer
+2024-05-29 22:36:52,704 INFO    HandlerThread:477968 [handler.py:handle_request_defer():172] handle defer: 3
+2024-05-29 22:36:52,705 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: defer
+2024-05-29 22:36:52,705 INFO    SenderThread:477968 [sender.py:send_request_defer():613] handle sender defer: 3
+2024-05-29 22:36:52,705 INFO    SenderThread:477968 [sender.py:transition_state():617] send defer: 4
+2024-05-29 22:36:52,705 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: defer
+2024-05-29 22:36:52,705 INFO    HandlerThread:477968 [handler.py:handle_request_defer():172] handle defer: 4
+2024-05-29 22:36:52,705 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: defer
+2024-05-29 22:36:52,705 INFO    SenderThread:477968 [sender.py:send_request_defer():613] handle sender defer: 4
+2024-05-29 22:36:52,705 INFO    SenderThread:477968 [sender.py:transition_state():617] send defer: 5
+2024-05-29 22:36:52,705 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: defer
+2024-05-29 22:36:52,705 INFO    HandlerThread:477968 [handler.py:handle_request_defer():172] handle defer: 5
+2024-05-29 22:36:52,705 DEBUG   SenderThread:477968 [sender.py:send():382] send: summary
+2024-05-29 22:36:52,705 INFO    SenderThread:477968 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-29 22:36:52,706 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: defer
+2024-05-29 22:36:52,706 INFO    SenderThread:477968 [sender.py:send_request_defer():613] handle sender defer: 5
+2024-05-29 22:36:52,706 INFO    SenderThread:477968 [sender.py:transition_state():617] send defer: 6
+2024-05-29 22:36:52,706 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: defer
+2024-05-29 22:36:52,706 INFO    HandlerThread:477968 [handler.py:handle_request_defer():172] handle defer: 6
+2024-05-29 22:36:52,706 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: defer
+2024-05-29 22:36:52,706 INFO    SenderThread:477968 [sender.py:send_request_defer():613] handle sender defer: 6
+2024-05-29 22:36:52,709 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 22:36:52,942 INFO    SenderThread:477968 [sender.py:transition_state():617] send defer: 7
+2024-05-29 22:36:52,942 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: defer
+2024-05-29 22:36:52,942 INFO    HandlerThread:477968 [handler.py:handle_request_defer():172] handle defer: 7
+2024-05-29 22:36:52,942 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: defer
+2024-05-29 22:36:52,942 INFO    SenderThread:477968 [sender.py:send_request_defer():613] handle sender defer: 7
+2024-05-29 22:36:53,190 INFO    Thread-12 :477968 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files/config.yaml
+2024-05-29 22:36:53,191 INFO    Thread-12 :477968 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files/wandb-summary.json
+2024-05-29 22:36:53,465 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-29 22:36:53,725 INFO    SenderThread:477968 [sender.py:transition_state():617] send defer: 8
+2024-05-29 22:36:53,725 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: poll_exit
+2024-05-29 22:36:53,725 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: defer
+2024-05-29 22:36:53,725 INFO    HandlerThread:477968 [handler.py:handle_request_defer():172] handle defer: 8
+2024-05-29 22:36:53,726 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: defer
+2024-05-29 22:36:53,726 INFO    SenderThread:477968 [sender.py:send_request_defer():613] handle sender defer: 8
+2024-05-29 22:36:53,726 INFO    SenderThread:477968 [job_builder.py:build():296] Attempting to build job artifact
+2024-05-29 22:36:53,726 INFO    SenderThread:477968 [job_builder.py:_get_source_type():426] is repo sourced job
+2024-05-29 22:36:53,753 INFO    SenderThread:477968 [job_builder.py:build():402] adding wandb-job metadata file
+2024-05-29 22:36:53,764 INFO    SenderThread:477968 [sender.py:transition_state():617] send defer: 9
+2024-05-29 22:36:53,764 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: defer
+2024-05-29 22:36:53,764 INFO    HandlerThread:477968 [handler.py:handle_request_defer():172] handle defer: 9
+2024-05-29 22:36:53,764 DEBUG   SenderThread:477968 [sender.py:send():382] send: artifact
+2024-05-29 22:36:54,191 INFO    Thread-12 :477968 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files/output.log
+2024-05-29 22:36:54,465 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-29 22:36:54,827 INFO    SenderThread:477968 [sender.py:send_artifact():1494] sent artifact job-https___github.com_singforai_on-policy.git_onpolicy_scripts_train_train_smac.py - {'id': 'QXJ0aWZhY3Q6ODUzNTA1ODMz', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE3OTk1Nzk3Ng==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6ODUzNTA1ODMz', 'versionIndex': 18}}}
+2024-05-29 22:36:54,827 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: defer
+2024-05-29 22:36:54,827 INFO    SenderThread:477968 [sender.py:send_request_defer():613] handle sender defer: 9
+2024-05-29 22:36:54,827 INFO    SenderThread:477968 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-05-29 22:36:55,192 INFO    SenderThread:477968 [dir_watcher.py:finish():388] scan: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files
+2024-05-29 22:36:55,192 INFO    SenderThread:477968 [dir_watcher.py:finish():402] scan save: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files/conda-environment.yaml conda-environment.yaml
+2024-05-29 22:36:55,192 INFO    SenderThread:477968 [dir_watcher.py:finish():402] scan save: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files/requirements.txt requirements.txt
+2024-05-29 22:36:55,192 INFO    SenderThread:477968 [dir_watcher.py:finish():402] scan save: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files/config.yaml config.yaml
+2024-05-29 22:36:55,196 INFO    SenderThread:477968 [dir_watcher.py:finish():402] scan save: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files/wandb-metadata.json wandb-metadata.json
+2024-05-29 22:36:55,196 INFO    SenderThread:477968 [dir_watcher.py:finish():402] scan save: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files/output.log output.log
+2024-05-29 22:36:55,196 INFO    SenderThread:477968 [dir_watcher.py:finish():402] scan save: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files/wandb-summary.json wandb-summary.json
+2024-05-29 22:36:55,196 INFO    SenderThread:477968 [sender.py:transition_state():617] send defer: 10
+2024-05-29 22:36:55,197 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: poll_exit
+2024-05-29 22:36:55,197 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: defer
+2024-05-29 22:36:55,199 INFO    HandlerThread:477968 [handler.py:handle_request_defer():172] handle defer: 10
+2024-05-29 22:36:55,204 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: defer
+2024-05-29 22:36:55,204 INFO    SenderThread:477968 [sender.py:send_request_defer():613] handle sender defer: 10
+2024-05-29 22:36:55,204 INFO    SenderThread:477968 [file_pusher.py:finish():175] shutting down file pusher
+2024-05-29 22:36:55,467 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-29 22:36:55,467 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: poll_exit
+2024-05-29 22:36:55,686 INFO    wandb-upload_1:477968 [upload_job.py:push():131] Uploaded file /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files/conda-environment.yaml
+2024-05-29 22:36:55,805 INFO    wandb-upload_0:477968 [upload_job.py:push():131] Uploaded file /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files/requirements.txt
+2024-05-29 22:36:55,824 INFO    wandb-upload_4:477968 [upload_job.py:push():131] Uploaded file /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files/wandb-summary.json
+2024-05-29 22:36:55,835 INFO    wandb-upload_2:477968 [upload_job.py:push():131] Uploaded file /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files/config.yaml
+2024-05-29 22:36:55,856 INFO    wandb-upload_3:477968 [upload_job.py:push():131] Uploaded file /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/files/output.log
+2024-05-29 22:36:56,056 INFO    Thread-11 :477968 [sender.py:transition_state():617] send defer: 11
+2024-05-29 22:36:56,056 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: defer
+2024-05-29 22:36:56,056 INFO    HandlerThread:477968 [handler.py:handle_request_defer():172] handle defer: 11
+2024-05-29 22:36:56,057 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: defer
+2024-05-29 22:36:56,057 INFO    SenderThread:477968 [sender.py:send_request_defer():613] handle sender defer: 11
+2024-05-29 22:36:56,057 INFO    SenderThread:477968 [file_pusher.py:join():181] waiting for file pusher
+2024-05-29 22:36:56,057 INFO    SenderThread:477968 [sender.py:transition_state():617] send defer: 12
+2024-05-29 22:36:56,057 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: defer
+2024-05-29 22:36:56,057 INFO    HandlerThread:477968 [handler.py:handle_request_defer():172] handle defer: 12
+2024-05-29 22:36:56,057 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: defer
+2024-05-29 22:36:56,057 INFO    SenderThread:477968 [sender.py:send_request_defer():613] handle sender defer: 12
+2024-05-29 22:36:56,057 INFO    SenderThread:477968 [file_stream.py:finish():595] file stream finish called
+2024-05-29 22:36:56,292 INFO    SenderThread:477968 [file_stream.py:finish():599] file stream finish is done
+2024-05-29 22:36:56,292 INFO    SenderThread:477968 [sender.py:transition_state():617] send defer: 13
+2024-05-29 22:36:56,292 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: defer
+2024-05-29 22:36:56,292 INFO    HandlerThread:477968 [handler.py:handle_request_defer():172] handle defer: 13
+2024-05-29 22:36:56,293 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: defer
+2024-05-29 22:36:56,293 INFO    SenderThread:477968 [sender.py:send_request_defer():613] handle sender defer: 13
+2024-05-29 22:36:56,293 INFO    SenderThread:477968 [sender.py:transition_state():617] send defer: 14
+2024-05-29 22:36:56,293 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: defer
+2024-05-29 22:36:56,293 INFO    HandlerThread:477968 [handler.py:handle_request_defer():172] handle defer: 14
+2024-05-29 22:36:56,293 DEBUG   SenderThread:477968 [sender.py:send():382] send: final
+2024-05-29 22:36:56,293 DEBUG   SenderThread:477968 [sender.py:send():382] send: footer
+2024-05-29 22:36:56,293 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: defer
+2024-05-29 22:36:56,293 INFO    SenderThread:477968 [sender.py:send_request_defer():613] handle sender defer: 14
+2024-05-29 22:36:56,294 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-29 22:36:56,294 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: poll_exit
+2024-05-29 22:36:56,294 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-29 22:36:56,295 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: poll_exit
+2024-05-29 22:36:56,295 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: server_info
+2024-05-29 22:36:56,295 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: get_summary
+2024-05-29 22:36:56,296 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: server_info
+2024-05-29 22:36:56,298 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: sampled_history
+2024-05-29 22:36:56,298 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 22:36:56,299 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: job_info
+2024-05-29 22:36:56,487 DEBUG   SenderThread:477968 [sender.py:send_request():409] send_request: job_info
+2024-05-29 22:36:56,487 INFO    MainThread:477968 [wandb_run.py:_footer_history_summary_info():3857] rendering history
+2024-05-29 22:36:56,487 INFO    MainThread:477968 [wandb_run.py:_footer_history_summary_info():3889] rendering summary
+2024-05-29 22:36:56,487 INFO    MainThread:477968 [wandb_run.py:_footer_sync_info():3816] logging synced files
+2024-05-29 22:36:56,488 DEBUG   HandlerThread:477968 [handler.py:handle_request():146] handle_request: shutdown
+2024-05-29 22:36:56,488 INFO    HandlerThread:477968 [handler.py:finish():869] shutting down handler
+2024-05-29 22:36:57,299 INFO    WriterThread:477968 [datastore.py:close():296] close: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240529_223640-s028eimi/run-s028eimi.wandb
+2024-05-29 22:36:57,487 INFO    SenderThread:477968 [sender.py:finish():1572] shutting down sender
+2024-05-29 22:36:57,487 INFO    SenderThread:477968 [file_pusher.py:finish():175] shutting down file pusher
+2024-05-29 22:36:57,487 INFO    SenderThread:477968 [file_pusher.py:join():181] waiting for file pusher

@@ -2,10 +2,16 @@ import time
 import wandb
 import numpy as np
 from functools import reduce
+
+import os
+import os.path as osp
+
+from tqdm import tqdm
+
 import torch
 from onpolicy.runner.shared.base_runner import Runner
 
-from onpolicy.runner.shared._reward_function import Reward_Function
+from onpolicy.runner.shared._reward_function import Reward_Function, TrainingEncoder
 def _t2n(x):
     return x.detach().cpu().numpy()
 
@@ -14,22 +20,8 @@ class SMACRunner(Runner):
     def __init__(self, config):
         super(SMACRunner, self).__init__(config)
 
-    def run(self):
-        self.warmup()   
-
-        self.share_obs_memory = torch.zeros()
-        start = time.time()
-        episodes = int(self.num_env_steps) // self.episode_length // self.n_rollout_threads
-
-        last_battles_game = np.zeros(self.n_rollout_threads, dtype=np.float32)
-        last_battles_won = np.zeros(self.n_rollout_threads, dtype=np.float32)
-
-        for episode in range(episodes):
-            if self.use_linear_lr_decay:
-                self.trainer.policy.lr_decay(episode, episodes)
-
-            self.episode_end = False
-
+    def sampling(self):
+        for _ in tqdm(range(self.sampling_episodes), desc="Sampling"):
             for step in range(self.episode_length):
                 # Sample actions
                 values, actions, action_log_probs, rnn_states, rnn_states_critic = self.collect(step)
@@ -37,40 +29,101 @@ class SMACRunner(Runner):
                 # Obser reward and next obs
                 obs, share_obs, rewards, dones, infos, available_actions = self.envs.step(actions)
 
+                self.auto_encoder.autoencoder.data.append(share_obs.reshape(-1))
 
-                if self.use_reward_shaping:
-                    if episode > 0:
-                        rewards = self.reward_shaping.clustering.predict_cluster(
-                            share_obs = np.array(share_obs).flatten(),
-                            rewards = rewards
-                        )
                 data = obs, share_obs, rewards, dones, infos, available_actions, \
                        values, actions, action_log_probs, \
                        rnn_states, rnn_states_critic 
                 
                 # insert data into buffer
                 self.insert(data)
-            #train_clustering
-            if self.use_reward_shaping:
-                self.reward_shaping.clustering.training(
-                    episode = episode,
-                    share_obs_set = self.buffer.share_obs[1:].reshape(100, -1),
-                    rewards_set = self.buffer.rewards[:, :, 0, :].reshape(100),
 
-                )
-                if self.use_visual_cluster:
-                    if episode % self.visual_cluster_interval == 0:
-                        self.reward_shaping.clustering.visualize_clusters(
+            self.buffer.after_update()
+
+        self.auto_encoder.train_encoder(
+            device = self.device, 
+            seed = self.seed
+        )
+
+    def load_encoder(self):
+        self.ae = self.auto_encoder.autoencoder
+        self.ae.to(self.device)
+        encoder_path  = osp.join(osp.dirname(__file__),f'auto_encoder/best_autoencoder_{self.seed}.pth')
+        checkpoint = torch.load(encoder_path, map_location = self.device)
+        self.ae.load_state_dict(checkpoint)
+        self.ae.eval()
+        os.remove(encoder_path)
+
+    def run(self):
+        self.warmup()
+        if self.use_reward_shaping:
+            self.load_encoder()
+
+        start = time.time()
+        episodes = int(self.num_env_steps) // self.episode_length // self.n_rollout_threads
+
+        last_battles_game = np.zeros(self.n_rollout_threads, dtype=np.float32)
+        last_battles_won = np.zeros(self.n_rollout_threads, dtype=np.float32)
+
+        episode_obs_stack = []
+        episode_reward_stack = []
+
+        for episode in range(episodes):
+            if self.use_linear_lr_decay:
+                self.trainer.policy.lr_decay(episode, episodes)
+
+            # post process
+            total_num_steps = (episode + 1) * self.episode_length * self.n_rollout_threads    
+
+            for step in range(self.episode_length):
+                # Sample actions
+                values, actions, action_log_probs, rnn_states, rnn_states_critic = self.collect(step)
+                    
+                # Obser reward and next obs
+                obs, share_obs, rewards, dones, infos, available_actions = self.envs.step(actions)
+                if self.use_reward_shaping:
+                    if episode > self.cluster_update_interval:
+                        ensemble_rewards = []
+                        for idx in range(self.num_ensemble):
+                            manifold_share_obs = self.ae.encoder(torch.tensor(share_obs).flatten().to(self.device))
+                            reward = self.reward_functions[idx].clustering.predict_cluster(
+                                share_obs = np.array(manifold_share_obs.detach().cpu()),
+                                rewards = rewards
+                            )
+                            ensemble_rewards.append(reward)
+                        rewards = np.mean(ensemble_rewards)
+                data = obs, share_obs, rewards, dones, infos, available_actions, \
+                       values, actions, action_log_probs, \
+                       rnn_states, rnn_states_critic 
+                
+                # insert data into buffer
+                self.insert(data)
+
+            #train_clustering
+            if episode>= 1:
+                if self.use_reward_shaping:
+                    episode_obs_stack.append(self.buffer.share_obs[1:].reshape(100, -1))
+                    episode_reward_stack.append(self.buffer.rewards[:, :, 0, :].reshape(100))
+                    
+            if self.use_reward_shaping:
+                if episode % self.cluster_update_interval == 0 and episode >= self.cluster_update_interval > 0:
+                    for idx in range(self.num_ensemble):
+                        self.reward_functions[idx].clustering.training(
                             episode = episode,
-                            share_obs_set = self.buffer.share_obs[1:].reshape(100, -1),
+                            share_obs_set = np.array(episode_obs_stack).reshape(self.shobs_stack, -1), 
+                            rewards_set = np.array(episode_reward_stack).reshape(-1),
+                            total_num_steps = total_num_steps,
+                            encoder = self.ae.encoder
                         )
+
+                        episode_obs_stack = []
+                        episode_reward_stack = []
 
             # compute return and update network
             self.compute()
             train_infos = self.train()
             
-            # post process
-            total_num_steps = (episode + 1) * self.episode_length * self.n_rollout_threads           
+       
             # save model
             if (episode % self.save_interval == 0 or episode == episodes - 1):
                 self.save()
@@ -122,16 +175,38 @@ class SMACRunner(Runner):
 
     def warmup(self):
         # reset env
+        self.shobs_stack = self.cluster_update_interval * self.episode_length
+
         obs, share_obs, available_actions = self.envs.reset()
 
+        if not self.use_centralized_V:
+            share_obs = obs
+        self.buffer.share_obs[0] = share_obs.copy()
+        self.buffer.obs[0] = obs.copy()
+        self.buffer.available_actions[0] = available_actions.copy()
+
+
         if self.use_reward_shaping:
-            self.reward_shaping = Reward_Function(
+            self.reward_functions = []
+            for _ in range(self.num_ensemble):
+                reward_shaping = Reward_Function(
+                    num_clusters = self.num_clusters, 
+                    device = self.device, 
+                    cluster_update_interval = self.cluster_update_interval,
+                    share_obs = torch.flatten(torch.tensor(share_obs)),
+                    use_wandb = self.use_wandb
+                )
+                self.reward_functions.append(reward_shaping)
+
+            self.auto_encoder = TrainingEncoder(
                 num_clusters = self.num_clusters, 
                 device = self.device, 
-                episode_length = self.episode_length,
                 share_obs = torch.flatten(torch.tensor(share_obs))
             )
-                
+
+            self.sampling()
+
+        obs, share_obs, available_actions = self.envs.reset()
 
         # replay buffer
         if not self.use_centralized_V:
@@ -140,6 +215,7 @@ class SMACRunner(Runner):
         self.buffer.share_obs[0] = share_obs.copy()
         self.buffer.obs[0] = obs.copy()
         self.buffer.available_actions[0] = available_actions.copy()
+
 
     @torch.no_grad()
     def collect(self, step):

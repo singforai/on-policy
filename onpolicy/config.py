@@ -163,6 +163,12 @@ def get_config():
         help="share_obs에 대해서 clustering을 수행함.",
     )
     parser.add_argument(
+        "--num_ensemble",
+        type = int,
+        default= 1,
+        help="앙상블 모델 수",
+    )
+    parser.add_argument(
         "--visual_cluster_interval",
         type = int,
         default= 200,
@@ -170,14 +176,21 @@ def get_config():
     )
     parser.add_argument(
         "--use_visual_cluster",
-        action = "store_false",
-        default= True,
+        action = "store_true",
+        default= False,
         help="cluster를 시각화할 것인가?",
     )
     parser.add_argument(
         "--cluster_update_interval",
         type = int,
-        default= 1,
+        default= 10,
+        help="K-means clustering을 업데이트하는 에피소드 간격",
+        
+    )
+    parser.add_argument(
+        "--sampling_episodes",
+        type = int,
+        default= 100,
         help="K-means clustering을 업데이트하는 에피소드 간격",
         
     )
@@ -234,7 +247,7 @@ def get_config():
         "--n_render_rollout_threads", type=int, default=1, help="Number of parallel envs for rendering rollouts"
     )
     parser.add_argument(
-        "--num_env_steps", type=int, default=2000000, help="Number of environment steps to train (default: 10e6)"
+        "--num_env_steps", type=int, default=3000000, help="Number of environment steps to train (default: 10e6)"
     )
     parser.add_argument(
         "--user_name",

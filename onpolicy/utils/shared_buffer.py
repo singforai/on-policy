@@ -157,7 +157,7 @@ class SharedReplayBuffer(object):
 
         self.step = (self.step + 1) % self.episode_length
 
-    def after_update(self):
+    def  after_update(self):
         """Copy last timestep data to first index. Called after update to model."""
         self.share_obs[0] = self.share_obs[-1].copy()
         self.obs[0] = self.obs[-1].copy()

@@ -1,0 +1,50 @@
+Sampling:   0%|          | 0/10 [00:00<?, ?it/s]/home/uosai/Desktop/on-policy/onpolicy/envs/starcraft2/StarCraft2_Env.py:462: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  actions_int = [int(a) for a in actions]
+
+
+
+
+Sampling: 100%|██████████| 10/10 [00:12<00:00,  1.23s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Train Encoder...:   8%|▊         | 779/10000 [01:05<12:52, 11.94it/s]
+Traceback (most recent call last):
+  File "/home/uosai/Desktop/on-policy/onpolicy/scripts/train/train_smac.py", line 290, in <module>
+    main(sys.argv[1:])
+  File "/home/uosai/Desktop/on-policy/onpolicy/scripts/train/train_smac.py", line 275, in main
+    runner.run()
+  File "/home/uosai/Desktop/on-policy/onpolicy/runner/shared/smac_runner.py", line 59, in run
+    self.load_encoder()
+  File "/home/uosai/Desktop/on-policy/onpolicy/runner/shared/smac_runner.py", line 54, in load_encoder
+    os.remove(encoder_path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/uosai/Desktop/on-policy/onpolicy/runner/shared/auto_encoder/best_autoencoder.pth'
+[ encoder 생성 완료 ]
