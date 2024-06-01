@@ -1,8 +1,15 @@
 import time
 import wandb
-import numpy as np
-from functools import reduce
 import torch
+
+import os
+import os.path as osp
+
+import numpy as np
+
+from tqdm import tqdm
+from functools import reduce
+
 from onpolicy.runner.shared.base_runner import Runner
 
 from onpolicy.runner.shared._reward_function import Reward_Function
@@ -14,10 +21,49 @@ class SMACRunner(Runner):
     def __init__(self, config):
         super(SMACRunner, self).__init__(config)
 
+    def load_encoder(self):
+        self.AE = self.shaping_function.AutoEncoder.to(self.device)
+        encoder_path  = osp.join(osp.dirname(__file__),f'auto_encoder/best_autoencoder_{self.seed}.pth')
+        checkpoint = torch.load(encoder_path, map_location = self.device)
+        self.AE.load_state_dict(checkpoint)
+        self.AE.eval()
+        os.remove(encoder_path)
+
+    def pre_sampling(self):
+        for _ in tqdm(range(self.num_pre_sampling//self.episode_length), desc="Pre-sampling"):
+            for step in range(self.episode_length):
+                values, actions, action_log_probs, rnn_states, rnn_states_critic = self.collect(step)
+                obs, share_obs, rewards, dones, infos, available_actions = self.envs.step(actions)
+
+                data = obs, share_obs, rewards, dones, infos, available_actions, \
+                       values, actions, action_log_probs, \
+                       rnn_states, rnn_states_critic 
+                
+                if self.use_AutoEncoder:
+                    self.shaping_function.AutoEncoder.data.append(share_obs.flatten())
+                else:
+                    self.shaping_function.clustering.shareobs_storage.append(share_obs.flatten())
+                self.shaping_function.clustering.rewards_storage.append(rewards[0][0][0])
+                
+                self.insert(data)
+            self.buffer.after_update()
+
+        if self.use_AutoEncoder:
+            self.shaping_function.train_ae(
+                train_epoch = self.all_args.ae_train_epoch,
+                batch_size = self.all_args.ae_batch_size,
+            )
+            self.load_encoder()
+            
+            for step_obs in tqdm(self.shaping_function.backup_data, desc="Restructure Data.."):
+                manifold_obs = self.AE.encoder(torch.tensor(step_obs).to(self.device)).detach().cpu().numpy()
+                self.shaping_function.clustering.shareobs_storage.append(manifold_obs)
+
+        self.shaping_function.clustering.init_centroids()
+        obs, share_obs, available_actions = self.envs.reset()
+
     def run(self):
         self.warmup()   
-
-        self.share_obs_memory = torch.zeros()
         start = time.time()
         episodes = int(self.num_env_steps) // self.episode_length // self.n_rollout_threads
 
@@ -28,8 +74,6 @@ class SMACRunner(Runner):
             if self.use_linear_lr_decay:
                 self.trainer.policy.lr_decay(episode, episodes)
 
-            self.episode_end = False
-
             for step in range(self.episode_length):
                 # Sample actions
                 values, actions, action_log_probs, rnn_states, rnn_states_critic = self.collect(step)
@@ -37,35 +81,30 @@ class SMACRunner(Runner):
                 # Obser reward and next obs
                 obs, share_obs, rewards, dones, infos, available_actions = self.envs.step(actions)
 
-
                 if self.use_reward_shaping:
                     if episode > 0:
-                        rewards = self.reward_shaping.clustering.predict_cluster(
-                            share_obs = np.array(share_obs).flatten(),
-                            rewards = rewards
-                        )
+                        if self.use_AutoEncoder:
+                            manifold_obs = self.AE.encoder(torch.tensor(share_obs.flatten()).to(self.device)).detach().cpu().numpy()
+                            rewards = self.shaping_function.clustering.predict_cluster(
+                                share_obs = manifold_obs,
+                                rewards = rewards
+                            )
+                            self.shaping_function.clustering.shareobs_storage.append(manifold_obs)
+                            self.shaping_function.clustering.rewards_storage.append(rewards[0][0][0])
+                        else:
+                            rewards = self.shaping_function.clustering.predict_cluster(
+                                share_obs = (share_obs).flatten(),
+                                rewards = rewards
+                            )
+                            self.shaping_function.clustering.shareobs_storage.append((share_obs).flatten())
+                            self.shaping_function.clustering.rewards_storage.append(rewards[0][0][0])
                 data = obs, share_obs, rewards, dones, infos, available_actions, \
                        values, actions, action_log_probs, \
                        rnn_states, rnn_states_critic 
                 
-                # insert data into buffer
                 self.insert(data)
-            #train_clustering
-            if self.use_reward_shaping:
-                self.reward_shaping.clustering.training(
-                    episode = episode,
-                    share_obs_set = self.buffer.share_obs[1:].reshape(100, -1),
-                    rewards_set = self.buffer.rewards[:, :, 0, :].reshape(100),
 
-                )
-                if self.use_visual_cluster:
-                    if episode % self.visual_cluster_interval == 0:
-                        self.reward_shaping.clustering.visualize_clusters(
-                            episode = episode,
-                            share_obs_set = self.buffer.share_obs[1:].reshape(100, -1),
-                        )
 
-            # compute return and update network
             self.compute()
             train_infos = self.train()
             
@@ -124,18 +163,37 @@ class SMACRunner(Runner):
         # reset env
         obs, share_obs, available_actions = self.envs.reset()
 
-        if self.use_reward_shaping:
-            self.reward_shaping = Reward_Function(
-                num_clusters = self.num_clusters, 
-                device = self.device, 
-                episode_length = self.episode_length,
-                share_obs = torch.flatten(torch.tensor(share_obs))
-            )
-                
-
-        # replay buffer
         if not self.use_centralized_V:
             share_obs = obs
+    
+        if self.use_reward_shaping:
+            self.num_clusters: int = self.all_args.num_clusters
+            self.seed: int = self.all_args.seed
+            self.cluster_update_interval: int  = self.all_args.cluster_update_interval
+
+            self.use_AutoEncoder: bool = self.all_args.use_autoencoder    
+            self.use_pre_sampling: bool = self.all_args.use_pre_sampling
+
+            self.buffer.share_obs[0] = share_obs.copy()
+            self.buffer.obs[0] = obs.copy()
+            self.buffer.available_actions[0] = available_actions.copy()
+
+            self.shaping_function = Reward_Function(
+                num_clusters = self.num_clusters, 
+                device = self.device, 
+                share_obs = share_obs.flatten(),
+                use_autoencoder = self.use_AutoEncoder,
+                use_pre_sampling = self.use_pre_sampling,
+                seed = self.seed,
+                cluster_update_interval = self.cluster_update_interval
+            )
+
+            if self.use_pre_sampling:
+                self.num_pre_sampling = self.all_args.num_pre_sampling
+                if self.num_pre_sampling < self.episode_length:
+                    ValueError("num_pre_sampling은 최소 하나의 에피소드를 포함해야 합니다.")
+                else:
+                    self.pre_sampling()
 
         self.buffer.share_obs[0] = share_obs.copy()
         self.buffer.obs[0] = obs.copy()

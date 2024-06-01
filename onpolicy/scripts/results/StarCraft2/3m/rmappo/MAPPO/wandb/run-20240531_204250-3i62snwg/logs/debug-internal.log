@@ -1,0 +1,19 @@
+2024-05-31 20:42:50,106 INFO    StreamThr :1492546 [internal.py:wandb_internal():86] W&B internal server running at pid: 1492546, started at: 2024-05-31 20:42:50.105941
+2024-05-31 20:42:50,107 DEBUG   HandlerThread:1492546 [handler.py:handle_request():146] handle_request: status
+2024-05-31 20:42:50,110 INFO    WriterThread:1492546 [datastore.py:open_for_write():87] open: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_204250-3i62snwg/run-3i62snwg.wandb
+2024-05-31 20:42:50,110 DEBUG   SenderThread:1492546 [sender.py:send():382] send: header
+2024-05-31 20:42:50,126 DEBUG   SenderThread:1492546 [sender.py:send():382] send: run
+2024-05-31 20:42:50,815 INFO    SenderThread:1492546 [dir_watcher.py:__init__():211] watching files in: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_204250-3i62snwg/files
+2024-05-31 20:42:50,815 INFO    SenderThread:1492546 [sender.py:_start_run_threads():1136] run started: 3i62snwg with start time 1717155770.105708
+2024-05-31 20:42:51,107 WARNING StreamThr :1492546 [internal.py:is_dead():414] Internal process exiting, parent pid 1491933 disappeared
+2024-05-31 20:42:51,108 ERROR   StreamThr :1492546 [internal.py:wandb_internal():152] Internal process shutdown.
+2024-05-31 20:42:51,126 INFO    HandlerThread:1492546 [handler.py:finish():869] shutting down handler
+2024-05-31 20:42:51,126 INFO    WriterThread:1492546 [datastore.py:close():296] close: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_204250-3i62snwg/run-3i62snwg.wandb
+2024-05-31 20:42:51,815 INFO    SenderThread:1492546 [sender.py:finish():1572] shutting down sender
+2024-05-31 20:42:51,815 INFO    SenderThread:1492546 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-05-31 20:42:52,813 INFO    SenderThread:1492546 [dir_watcher.py:finish():388] scan: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_204250-3i62snwg/files
+2024-05-31 20:42:52,814 INFO    SenderThread:1492546 [dir_watcher.py:finish():402] scan save: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_204250-3i62snwg/files/config.yaml config.yaml
+2024-05-31 20:42:52,814 INFO    SenderThread:1492546 [file_pusher.py:finish():175] shutting down file pusher
+2024-05-31 20:42:52,814 INFO    SenderThread:1492546 [file_pusher.py:join():181] waiting for file pusher
+2024-05-31 20:42:53,627 INFO    wandb-upload_0:1492546 [upload_job.py:push():131] Uploaded file /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_204250-3i62snwg/files/config.yaml
+2024-05-31 20:42:53,627 INFO    MainThread:1492546 [internal.py:handle_exit():76] Internal process exited

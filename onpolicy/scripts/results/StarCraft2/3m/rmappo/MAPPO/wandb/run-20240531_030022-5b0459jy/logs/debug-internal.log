@@ -1,0 +1,1463 @@
+2024-05-31 03:00:22,614 INFO    StreamThr :1061516 [internal.py:wandb_internal():86] W&B internal server running at pid: 1061516, started at: 2024-05-31 03:00:22.614057
+2024-05-31 03:00:22,615 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status
+2024-05-31 03:00:22,620 INFO    WriterThread:1061516 [datastore.py:open_for_write():87] open: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/run-5b0459jy.wandb
+2024-05-31 03:00:22,621 DEBUG   SenderThread:1061516 [sender.py:send():382] send: header
+2024-05-31 03:00:22,649 DEBUG   SenderThread:1061516 [sender.py:send():382] send: run
+2024-05-31 03:00:23,178 INFO    SenderThread:1061516 [dir_watcher.py:__init__():211] watching files in: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files
+2024-05-31 03:00:23,178 INFO    SenderThread:1061516 [sender.py:_start_run_threads():1136] run started: 5b0459jy with start time 1717092022.613925
+2024-05-31 03:00:23,189 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: check_version
+2024-05-31 03:00:23,189 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: check_version
+2024-05-31 03:00:23,247 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: run_start
+2024-05-31 03:00:23,259 DEBUG   HandlerThread:1061516 [system_info.py:__init__():27] System info init
+2024-05-31 03:00:23,260 DEBUG   HandlerThread:1061516 [system_info.py:__init__():42] System info init done
+2024-05-31 03:00:23,260 INFO    HandlerThread:1061516 [system_monitor.py:start():194] Starting system monitor
+2024-05-31 03:00:23,260 INFO    SystemMonitor:1061516 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-31 03:00:23,260 INFO    HandlerThread:1061516 [system_monitor.py:probe():214] Collecting system info
+2024-05-31 03:00:23,262 INFO    SystemMonitor:1061516 [interfaces.py:start():190] Started cpu monitoring
+2024-05-31 03:00:23,262 INFO    SystemMonitor:1061516 [interfaces.py:start():190] Started disk monitoring
+2024-05-31 03:00:23,263 INFO    SystemMonitor:1061516 [interfaces.py:start():190] Started gpu monitoring
+2024-05-31 03:00:23,264 INFO    SystemMonitor:1061516 [interfaces.py:start():190] Started memory monitoring
+2024-05-31 03:00:23,265 INFO    SystemMonitor:1061516 [interfaces.py:start():190] Started network monitoring
+2024-05-31 03:00:23,277 DEBUG   HandlerThread:1061516 [system_info.py:probe():151] Probing system
+2024-05-31 03:00:23,287 DEBUG   HandlerThread:1061516 [system_info.py:_probe_git():136] Probing git
+2024-05-31 03:00:23,304 DEBUG   HandlerThread:1061516 [system_info.py:_probe_git():144] Probing git done
+2024-05-31 03:00:23,304 DEBUG   HandlerThread:1061516 [system_info.py:probe():199] Probing system done
+2024-05-31 03:00:23,304 DEBUG   HandlerThread:1061516 [system_monitor.py:probe():223] {'os': 'Linux-6.5.0-35-generic-x86_64-with-glibc2.35', 'python': '3.9.18', 'heartbeatAt': '2024-05-30T18:00:23.277487', 'startedAt': '2024-05-30T18:00:22.607533', 'docker': None, 'cuda': None, 'args': ('--seed', '350', '--env_name', 'StarCraft2', '--experiment_name', 'MAPPO', '--group_name', 'cluster15_MAPPO', '--num_clusters', '15', '--use_visual_cluster', '--num_gpu', '1'), 'state': 'running', 'program': '/home/uosai/Desktop/on-policy/onpolicy/scripts/train/train_smac.py', 'codePathLocal': 'train_smac.py', 'codePath': 'onpolicy/scripts/train/train_smac.py', 'git': {'remote': 'https://github.com/singforai/on-policy.git', 'commit': '14d4b373e79555e79221655c211e9561875c023b'}, 'email': 'singfor7012@gmail.com', 'root': '/home/uosai/Desktop/on-policy', 'host': 'uos-desktop', 'username': 'uosai', 'executable': '/home/uosai/Desktop/miniconda3/envs/marl/bin/python', 'cpu_count': 12, 'cpu_count_logical': 24, 'cpu_freq': {'current': 4289.634541666666, 'min': 2200.0, 'max': 3700.0}, 'cpu_freq_per_core': [{'current': 4260.482, 'min': 2200.0, 'max': 3700.0}, {'current': 4262.821, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.567, 'min': 2200.0, 'max': 3700.0}, {'current': 4259.926, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.554, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.447, 'min': 2200.0, 'max': 3700.0}, {'current': 4261.687, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.558, 'min': 2200.0, 'max': 3700.0}, {'current': 4265.499, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.558, 'min': 2200.0, 'max': 3700.0}, {'current': 4258.601, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.564, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.555, 'min': 2200.0, 'max': 3700.0}, {'current': 4265.603, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.566, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.543, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.551, 'min': 2200.0, 'max': 3700.0}, {'current': 4258.972, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.562, 'min': 2200.0, 'max': 3700.0}, {'current': 4261.848, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.454, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.535, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.567, 'min': 2200.0, 'max': 3700.0}, {'current': 4260.552, 'min': 2200.0, 'max': 3700.0}], 'disk': {'/': {'total': 233.17998886108398, 'used': 191.53142166137695}}, 'gpu': 'NVIDIA GeForce RTX 3080', 'gpu_count': 2, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3080', 'memory_total': 10737418240}, {'name': 'NVIDIA GeForce RTX 3080', 'memory_total': 10737418240}], 'memory': {'total': 62.709049224853516}}
+2024-05-31 03:00:23,304 INFO    HandlerThread:1061516 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-31 03:00:23,304 INFO    HandlerThread:1061516 [system_monitor.py:probe():227] Publishing system info
+2024-05-31 03:00:23,305 DEBUG   HandlerThread:1061516 [system_info.py:_save_conda():208] Saving list of conda packages installed into the current environment
+2024-05-31 03:00:24,180 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/conda-environment.yaml
+2024-05-31 03:00:25,842 DEBUG   HandlerThread:1061516 [system_info.py:_save_conda():220] Saving conda packages done
+2024-05-31 03:00:25,843 INFO    HandlerThread:1061516 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-31 03:00:25,846 DEBUG   SenderThread:1061516 [sender.py:send():382] send: files
+2024-05-31 03:00:25,846 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-metadata.json with policy now
+2024-05-31 03:00:25,858 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: python_packages
+2024-05-31 03:00:25,858 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:00:25,859 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: python_packages
+2024-05-31 03:00:25,860 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:00:25,864 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:00:26,180 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/conda-environment.yaml
+2024-05-31 03:00:26,181 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-metadata.json
+2024-05-31 03:00:26,181 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/requirements.txt
+2024-05-31 03:00:26,183 DEBUG   SenderThread:1061516 [sender.py:send():382] send: telemetry
+2024-05-31 03:00:26,562 DEBUG   SenderThread:1061516 [sender.py:send():382] send: telemetry
+2024-05-31 03:00:26,718 INFO    wandb-upload_0:1061516 [upload_job.py:push():131] Uploaded file /tmp/tmpxohjijbywandb/h0zmh9ks-wandb-metadata.json
+2024-05-31 03:00:26,932 DEBUG   SenderThread:1061516 [sender.py:send():382] send: telemetry
+2024-05-31 03:00:27,932 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:00:32,933 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:00:34,183 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:00:36,107 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:00:36,107 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:00:36,108 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:00:36,108 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:00:36,184 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:00:36,184 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/critic.pt
+2024-05-31 03:00:36,184 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/actor.pt
+2024-05-31 03:00:36,517 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:00:36,517 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:00:36,518 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:00:36,518 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:00:36,518 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:00:38,185 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:00:38,518 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:00:40,856 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:00:40,857 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:00:40,857 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:00:42,750 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:00:42,751 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:00:43,751 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:00:44,188 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:00:48,751 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:00:53,756 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:00:54,190 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/config.yaml
+2024-05-31 03:00:55,856 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:00:55,856 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:00:55,859 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:00:59,146 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:01:04,147 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:01:06,504 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:06,505 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:06,506 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:06,506 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:06,506 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:06,506 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:06,506 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:06,506 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:06,506 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:06,506 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:01:06,506 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:01:06,508 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:01:06,656 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:06,656 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:07,196 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_created():271] file/dir created: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:01:08,196 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:01:09,657 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:01:10,856 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:01:10,856 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:01:10,858 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:01:15,169 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:01:20,170 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:01:23,265 DEBUG   SystemMonitor:1061516 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-31 03:01:23,266 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:01:25,267 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:01:25,856 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:01:25,856 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:01:25,904 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:01:29,840 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:29,841 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:29,841 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:29,841 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:01:29,841 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:29,842 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:01:29,842 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:29,842 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:29,842 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:29,842 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:29,842 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:29,842 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:01:30,003 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:30,004 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:30,203 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:01:31,004 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:01:32,203 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:01:36,005 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:01:40,856 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:01:40,856 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:01:40,858 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:01:41,068 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:01:46,069 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:01:51,069 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:01:53,267 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:01:53,764 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:53,765 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:53,765 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:01:53,765 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:53,765 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:01:53,765 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:53,765 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:53,766 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:53,766 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:53,766 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:53,766 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:53,766 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:01:53,877 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:53,877 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:01:54,210 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:01:55,856 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:01:55,856 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:01:55,858 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:01:56,142 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:01:56,211 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:02:01,142 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:02:06,143 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:02:10,856 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:02:10,857 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:02:10,900 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:02:12,068 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:02:17,069 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:02:17,128 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:17,129 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:17,129 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:17,129 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:02:17,129 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:17,129 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:02:17,130 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:17,131 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:17,131 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:17,131 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:17,131 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:17,131 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:02:17,217 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:02:17,254 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:17,255 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:17,325 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:02:18,217 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:02:22,256 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:02:23,268 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:02:25,856 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:02:25,857 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:02:25,859 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:02:28,069 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:02:33,069 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:02:33,461 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:02:38,070 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:02:40,028 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:40,029 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:40,029 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:40,029 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:40,029 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:40,029 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:40,029 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:40,029 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:02:40,030 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:40,030 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:02:40,030 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:40,030 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:02:40,163 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:40,164 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:02:40,223 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:02:40,856 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:02:40,857 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:02:40,858 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:02:43,091 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:02:43,224 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:02:48,091 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:02:52,416 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:02:53,092 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:02:53,269 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:02:55,857 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:02:55,857 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:02:55,900 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:02:58,094 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:03:03,095 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:03:03,188 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:03,188 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:03,189 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:03,189 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:03:03,189 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:03,189 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:03:03,190 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:03,191 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:03,191 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:03,191 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:03,191 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:03,191 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:03:03,230 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:03:03,304 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:03,304 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:03,380 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:03:05,231 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:03:08,305 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:03:10,856 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:03:10,857 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:03:10,859 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:03:14,156 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:03:14,440 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:03:19,156 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:03:23,270 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:03:24,270 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:03:25,857 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:03:25,857 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:03:25,900 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:03:26,165 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:26,166 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:26,166 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:26,166 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:26,167 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:26,167 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:03:26,167 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:26,167 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:03:26,167 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:26,169 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:26,169 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:26,169 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:03:26,237 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:03:26,334 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:26,351 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:03:26,376 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:29,238 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:03:29,376 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:03:34,377 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:03:38,463 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:03:39,378 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:03:40,857 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:03:40,857 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:03:40,859 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:03:45,156 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:03:49,160 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:49,160 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:49,161 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:49,161 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:49,161 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:49,161 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:49,161 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:49,161 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:49,161 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:49,161 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:03:49,162 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:03:49,163 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:03:49,243 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:03:49,305 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:49,305 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:03:49,352 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:03:50,306 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:03:51,244 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:03:53,270 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:03:55,857 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:03:55,857 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:03:55,859 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:03:56,129 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:04:01,130 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:04:03,460 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:04:06,131 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:04:10,857 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:04:10,857 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:04:10,900 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:04:11,135 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:04:12,100 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:12,101 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:12,101 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:12,101 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:12,101 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:12,101 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:12,101 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:12,101 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:04:12,101 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:12,102 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:04:12,102 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:12,102 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:04:12,207 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:12,208 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:12,250 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:04:14,505 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:04:15,251 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:04:16,209 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:04:21,209 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:04:23,271 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:04:25,857 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:04:25,857 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:04:25,860 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:04:27,141 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:04:32,142 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:04:33,461 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:04:35,344 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:35,345 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:35,345 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:35,346 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:04:35,346 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:35,346 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:04:35,346 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:35,346 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:35,346 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:35,346 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:35,346 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:35,347 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:04:35,467 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:35,468 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:36,256 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:04:37,257 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:04:37,468 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:04:40,857 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:04:40,857 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:04:40,859 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:04:43,132 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:04:46,522 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:04:48,132 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:04:53,133 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:04:53,272 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:04:55,857 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:04:55,858 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:04:55,900 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:04:58,384 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:04:58,428 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:58,429 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:58,429 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:58,429 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:04:58,429 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:58,429 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:04:58,429 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:58,431 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:58,431 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:04:58,431 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:58,432 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:58,432 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:58,535 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:58,535 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:04:58,623 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:04:59,263 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:05:01,263 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:05:03,536 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:05:08,536 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:05:10,542 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:05:10,857 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:05:10,858 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:05:10,859 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:05:14,064 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:05:19,065 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:05:20,784 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:20,784 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:20,785 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:20,785 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:05:20,785 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:20,785 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:05:20,785 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:20,786 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:20,786 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:20,786 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:20,787 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:20,787 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:05:20,927 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:20,928 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:20,973 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:05:21,269 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:05:23,269 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:05:23,281 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:05:24,282 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:05:25,857 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:05:25,858 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:05:25,859 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:05:30,152 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:05:35,152 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:05:40,153 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:05:40,858 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:05:40,858 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:05:40,904 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:05:43,300 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:43,301 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:43,301 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:43,301 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:05:43,301 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:43,301 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:05:43,301 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:43,302 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:43,302 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:43,302 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:43,302 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:43,302 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:05:43,412 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:43,412 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:05:44,275 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:05:45,275 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:05:45,413 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:05:50,413 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:05:53,273 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:05:53,465 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:05:55,857 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:05:55,858 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:05:55,859 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:05:56,120 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:06:01,121 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:06:06,121 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:06:06,868 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:06,869 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:06,869 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:06,869 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:06,869 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:06,869 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:06,869 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:06,869 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:06,869 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:06,869 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:06:06,869 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:06:06,870 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:06:07,018 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:07,019 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:07,281 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:06:09,282 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:06:10,858 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:06:10,858 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:06:10,860 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:06:11,150 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:06:16,151 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:06:21,151 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:06:23,274 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:06:23,460 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:06:25,858 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:06:25,858 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:06:25,860 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:06:27,068 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:06:30,304 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:30,305 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:30,305 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:30,305 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:30,305 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:30,305 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:30,305 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:30,305 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:06:30,305 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:30,305 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:06:30,305 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:30,306 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:06:30,423 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:30,424 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:31,288 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:06:32,424 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:06:33,288 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:06:37,425 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:06:40,858 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:06:40,858 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:06:40,860 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:06:43,065 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:06:48,066 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:06:52,676 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:52,677 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:52,677 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:52,677 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:52,677 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:52,677 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:06:52,677 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:52,677 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:06:52,678 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:52,678 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:52,678 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:52,679 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:06:52,808 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:52,809 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:06:53,275 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:06:53,277 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:06:53,293 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:06:53,461 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:06:55,294 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:06:55,858 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:06:55,858 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:06:55,861 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:06:59,070 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:07:04,070 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:07:09,071 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:07:10,858 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:07:10,858 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:07:10,900 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:07:14,125 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:07:14,964 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:14,965 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:14,965 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:14,965 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:14,965 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:14,965 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:14,965 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:07:14,965 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:14,965 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:07:14,966 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:14,966 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:14,966 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:07:15,091 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:15,091 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:15,299 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:07:17,300 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:07:20,092 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:07:23,276 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:07:23,469 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:07:25,277 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:07:25,858 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:07:25,859 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:07:25,861 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:07:31,165 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:07:36,166 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:07:37,636 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:37,637 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:37,637 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:37,637 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:37,637 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:37,637 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:37,638 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:37,638 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:37,638 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:37,638 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:07:37,638 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:07:37,638 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:07:37,768 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:37,768 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:07:38,305 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:07:39,305 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:07:40,858 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:07:40,859 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:07:40,861 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:07:42,062 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:07:47,062 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:07:52,063 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:07:53,277 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:07:53,460 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:07:55,858 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:07:55,859 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:07:55,904 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:07:57,098 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:08:00,948 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:00,949 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:00,949 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:00,949 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:08:00,949 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:00,949 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:08:00,949 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:00,950 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:00,950 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:00,950 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:00,950 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:00,950 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:08:01,076 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:01,076 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:01,311 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:08:03,077 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:08:03,312 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:08:08,077 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:08:10,858 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:08:10,859 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:08:10,861 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:08:14,060 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:08:19,060 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:08:23,278 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:08:23,479 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:08:23,712 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:23,713 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:23,713 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:23,713 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:23,713 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:23,713 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:08:23,713 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:23,713 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:08:23,713 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:23,714 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:23,714 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:23,714 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:08:23,845 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:23,846 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:24,318 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:08:24,846 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:08:25,318 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:08:25,858 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:08:25,859 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:08:25,861 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:08:30,115 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:08:35,116 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:08:40,116 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:08:40,858 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:08:40,859 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:08:40,900 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:08:46,106 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:08:46,620 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:46,621 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:46,621 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:46,621 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:46,621 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:46,621 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:46,621 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:46,621 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:08:46,621 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:46,622 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:08:46,622 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:46,622 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:08:46,774 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:46,776 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:08:47,324 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:08:49,325 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:08:51,777 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:08:53,278 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:08:53,472 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:08:55,859 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:08:55,859 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:08:55,862 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:08:57,080 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:09:02,081 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:09:07,081 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:09:09,312 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:09,313 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:09,313 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:09,313 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:09,313 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:09:09,313 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:09,313 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:09:09,313 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:09,314 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:09,314 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:09,314 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:09,314 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:09:09,331 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:09:09,481 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:09,481 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:10,860 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:09:10,860 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:09:10,862 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:09:11,331 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:09:12,088 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:09:17,089 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:09:22,089 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:09:23,279 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:09:23,469 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:09:25,859 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:09:25,859 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:09:25,900 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:09:27,151 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:09:32,151 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:09:32,556 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:32,557 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:32,557 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:32,557 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:09:32,557 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:32,557 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:09:32,558 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:32,558 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:32,558 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:32,558 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:32,558 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:32,558 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:09:32,682 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:32,682 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:33,338 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:09:35,339 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:09:37,683 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:09:40,859 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:09:40,859 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:09:40,862 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:09:43,125 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:09:48,125 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:09:53,126 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:09:53,280 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:09:53,474 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:09:55,532 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:55,533 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:55,533 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:55,533 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:09:55,533 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:55,534 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:09:55,534 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:55,534 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:55,534 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:55,534 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:55,534 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:55,535 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:09:55,715 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:55,715 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:09:55,859 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:09:55,859 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:09:55,862 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:09:56,345 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:09:57,345 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:09:59,087 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:10:04,087 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:10:09,088 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:10:10,859 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:10:10,859 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:10:10,904 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:10:15,079 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:10:18,604 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:18,605 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:18,605 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:18,605 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:10:18,605 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:18,605 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:10:18,605 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:18,606 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:18,606 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:18,606 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:18,606 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:18,606 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:10:18,767 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:18,767 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:19,351 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:10:20,768 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:10:21,352 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:10:23,291 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:10:23,484 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:10:25,859 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:10:25,859 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:10:25,862 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:10:26,139 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:10:31,140 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:10:36,140 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:10:40,859 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:10:40,860 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:10:40,900 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:10:41,413 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:10:41,456 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:41,457 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:41,457 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:41,457 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:41,457 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:41,457 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:41,457 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:41,457 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:41,457 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:41,457 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:10:41,458 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:10:41,458 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:10:41,589 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:41,590 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:10:42,358 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:10:43,359 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:10:46,591 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:10:51,591 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:10:53,281 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:10:55,860 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:10:55,860 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:10:55,862 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:10:57,121 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:11:02,122 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:11:04,168 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:04,169 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:04,169 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:04,169 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:11:04,169 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:04,169 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:11:04,169 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:04,171 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:04,171 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:04,171 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:04,171 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:04,171 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:11:04,313 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:04,314 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:04,362 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:11:04,365 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:11:05,365 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:11:07,314 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:11:07,366 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:11:10,860 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:11:10,860 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:11:10,862 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:11:13,162 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:11:18,163 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:11:23,163 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:11:23,282 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:11:25,860 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:11:25,860 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:11:25,904 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:11:27,308 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:27,309 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:27,309 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:27,309 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:27,309 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:27,309 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:27,309 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:27,309 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:11:27,309 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:27,309 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:11:27,310 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:27,310 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:11:27,371 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:11:27,413 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:27,413 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:28,414 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:11:29,373 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:11:33,414 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:11:38,415 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:11:40,860 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:11:40,860 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:11:40,862 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:11:44,073 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:11:49,074 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:11:49,800 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:49,801 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:49,801 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:49,801 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:49,801 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:49,801 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:11:49,801 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:49,801 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:11:49,802 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:49,803 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:49,803 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:49,803 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:11:49,920 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:49,920 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:11:49,987 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:11:50,379 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:11:51,379 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:11:53,283 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:11:54,284 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:11:55,860 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:11:55,860 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:11:55,863 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:12:00,060 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:12:05,060 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:12:10,061 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:12:10,860 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:12:10,860 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:12:10,863 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:12:11,728 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:11,729 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:11,729 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:11,729 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:11,729 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:11,729 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:12:11,729 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:11,730 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:12:11,730 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:11,730 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:11,730 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:11,730 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:12:11,896 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:11,896 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:12,385 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:12:13,385 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:12:15,897 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:12:20,897 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:12:23,284 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:12:23,467 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:12:25,860 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:12:25,860 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:12:25,863 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:12:26,124 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:12:30,295 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:30,295 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:30,296 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:30,296 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:30,296 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:12:30,296 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:12:30,296 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:30,296 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:30,297 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:30,297 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:30,297 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:30,297 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:12:30,390 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:12:30,441 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:30,441 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:31,390 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:12:31,442 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:12:33,391 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:12:36,442 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:12:40,860 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:12:40,861 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:12:40,863 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:12:42,079 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:12:47,080 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:12:47,164 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:47,165 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:47,165 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:47,165 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:12:47,165 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:47,165 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:12:47,165 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:47,166 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:47,166 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:47,166 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:47,166 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:47,166 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:12:47,293 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:47,293 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:12:47,395 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:12:49,396 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:12:52,294 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:12:53,284 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:12:53,476 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:12:55,860 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:12:55,861 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:12:55,863 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:12:58,112 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:13:02,649 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:02,649 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:02,650 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:02,650 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:13:02,650 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:13:02,650 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:02,650 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:02,650 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:02,650 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:02,650 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:02,650 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:02,651 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:13:02,770 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:02,770 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:03,400 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:13:03,771 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:13:05,400 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:13:08,771 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:13:10,860 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:13:10,861 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:13:10,863 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:13:14,121 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:13:17,820 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:17,820 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:17,820 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:17,821 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:17,821 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:17,821 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:13:17,821 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:13:17,821 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:17,822 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:17,822 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:17,822 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:17,822 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:13:17,946 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:17,946 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:18,404 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:13:19,404 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:13:19,947 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:13:23,285 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:13:23,477 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:13:25,286 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:13:25,860 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:13:25,861 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:13:25,863 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:13:31,176 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:13:32,064 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:32,065 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:13:32,065 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:13:32,066 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:32,066 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:13:32,066 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:32,067 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:32,067 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:32,067 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:32,068 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:32,068 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:32,068 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:32,241 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:32,242 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:32,408 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:13:33,409 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:13:36,243 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:13:40,861 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:13:40,861 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:13:40,864 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:13:42,082 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:13:47,083 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:13:48,229 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:48,230 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:48,230 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:48,230 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:48,231 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:48,231 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:48,231 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:48,231 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:48,231 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:48,231 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:13:48,231 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:13:48,231 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:13:48,368 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:48,368 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:13:48,414 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:13:49,414 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:13:52,369 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:13:53,286 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:13:53,473 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:13:55,861 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:13:55,861 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:13:55,864 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:13:58,066 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:14:03,067 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:14:08,068 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:14:08,342 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:08,343 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:14:08,343 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:14:08,343 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:14:08,343 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:08,344 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:08,344 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:08,344 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:08,344 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:08,344 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:08,344 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:08,344 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:08,420 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:14:08,586 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:08,587 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:09,421 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:14:10,861 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:14:10,861 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:14:10,864 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:14:11,421 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:14:13,068 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:14:18,069 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:14:23,069 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:14:23,287 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:14:23,470 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:14:25,861 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:14:25,861 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:14:25,868 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:14:28,153 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:14:31,772 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:31,772 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:31,773 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:31,773 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:14:31,775 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:14:31,775 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:14:31,775 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:31,776 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:31,776 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:31,776 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:31,776 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:31,776 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:31,995 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:31,996 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:32,428 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:14:33,429 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:14:33,996 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:14:38,997 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:14:40,861 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:14:40,861 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:14:40,868 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:14:44,082 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:14:49,083 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:14:53,288 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:14:53,479 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:14:54,289 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:14:55,564 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:55,565 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:55,565 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:55,565 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:14:55,565 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:55,565 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:14:55,566 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:55,566 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:55,566 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:55,566 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:55,566 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:55,566 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:14:55,729 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:55,730 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:14:55,861 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:14:55,861 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:14:55,868 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:14:56,435 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:14:57,436 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:15:00,110 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:15:05,111 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:15:10,112 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:15:10,862 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:15:10,862 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:15:10,904 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:15:15,155 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:15:18,756 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:18,757 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:18,757 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:18,757 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:18,758 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:18,758 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:18,758 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:18,758 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:18,758 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:18,770 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:15:18,771 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:15:18,771 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:15:18,904 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:18,905 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:19,443 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:15:20,905 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:15:21,443 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:15:23,289 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:15:23,478 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:15:25,863 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:15:25,863 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:15:25,868 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:15:26,155 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:15:31,156 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:15:36,157 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:15:40,863 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:15:40,864 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:15:40,908 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:15:42,078 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:15:42,628 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:42,629 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:42,629 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:42,629 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:42,629 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:42,629 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:15:42,629 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:42,629 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:15:42,630 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:42,630 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:42,630 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:42,630 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:15:42,781 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:42,782 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:15:43,451 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:15:45,452 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:15:47,783 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:15:52,783 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:15:53,290 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:15:53,486 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:15:55,863 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:15:55,864 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:15:55,868 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:15:58,148 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:16:03,149 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:16:06,472 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:06,473 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:06,473 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:16:06,473 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:16:06,474 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:16:06,473 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:06,474 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:06,474 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:06,474 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:06,474 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:06,474 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:06,474 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:06,619 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:06,619 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:07,458 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:16:07,459 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:16:08,620 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:16:09,459 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:16:10,863 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:16:10,864 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:16:10,868 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:16:14,155 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:16:19,156 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:16:23,291 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:16:23,478 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:16:24,291 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:16:25,871 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:16:25,871 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:16:25,872 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:16:30,017 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:16:30,017 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:30,018 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:30,018 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:30,018 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:30,019 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:30,019 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:30,019 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:30,019 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:30,019 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:30,018 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:16:30,019 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:16:30,019 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:16:30,201 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:30,202 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:30,466 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:16:31,466 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:16:35,203 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:16:40,204 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:16:40,872 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:16:40,872 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:16:40,916 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:16:46,156 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:16:51,156 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:16:53,291 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:16:53,479 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:16:53,876 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:53,877 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:53,877 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:53,877 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:53,877 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:53,877 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:53,877 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:53,877 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:53,877 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:53,878 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:16:53,878 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:16:53,878 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:16:54,045 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:54,045 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:16:54,473 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:16:55,474 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:16:55,872 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:16:55,872 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:16:55,916 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:16:57,106 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:17:02,106 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:17:07,107 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:17:10,872 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:17:10,872 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:17:10,920 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:17:15,672 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:17:18,436 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:18,437 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:18,437 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:18,437 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:18,437 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:18,437 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:18,437 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:18,437 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:18,437 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:18,437 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:17:18,438 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:17:18,438 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:17:18,481 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:17:18,600 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:18,600 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:19,482 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:17:21,601 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:17:23,292 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:17:23,483 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:17:25,872 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:17:25,872 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:17:25,916 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:17:27,175 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:17:32,176 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:17:37,176 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:17:40,872 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:17:40,873 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:17:40,916 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:17:43,040 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:17:43,080 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:43,081 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:43,081 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:43,081 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:17:43,081 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:43,082 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:43,082 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:43,082 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:43,082 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:43,082 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:43,081 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:17:43,082 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:17:43,238 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:43,239 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:17:43,490 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:17:45,491 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:17:48,240 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:17:53,240 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:17:53,293 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:17:53,485 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:17:55,872 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:17:55,873 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:17:55,873 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:17:59,068 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:18:04,069 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:18:06,611 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:06,611 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:18:06,612 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:18:06,612 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:18:06,613 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:06,613 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:06,613 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:06,613 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:06,614 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:06,614 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:06,614 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:06,614 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:06,854 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:06,854 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:07,499 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:18:07,499 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:18:09,500 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:18:09,855 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:18:10,873 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:18:10,873 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:18:10,874 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:18:15,170 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:18:20,171 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:18:23,294 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:18:23,497 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:18:25,295 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:18:25,873 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:18:25,873 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:18:25,873 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:18:30,259 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:30,260 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:30,260 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:30,261 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:30,261 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:30,261 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:18:30,261 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:30,261 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:30,261 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:30,261 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:30,261 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:18:30,261 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:18:30,487 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:30,487 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:30,488 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:18:30,506 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:18:31,507 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:18:35,489 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:18:40,490 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:18:40,873 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:18:40,873 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:18:40,873 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:18:46,157 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:18:51,159 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:18:53,295 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:18:53,401 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:53,402 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:53,402 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:53,402 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:53,402 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:53,402 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:53,402 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:53,403 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:53,403 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:53,403 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:18:53,403 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:18:53,403 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:18:53,480 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:18:53,514 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:18:53,629 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:53,630 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:18:55,515 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:18:55,873 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:18:55,873 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:18:55,873 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:18:57,099 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:19:02,100 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:19:07,102 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:19:10,873 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:19:10,873 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:19:10,874 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:19:13,072 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:19:17,412 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:17,413 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:17,413 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:17,413 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:17,413 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:17,413 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:17,414 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:17,414 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:17,414 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:17,414 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:19:17,414 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:19:17,415 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:19:17,521 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:19:17,628 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:17,628 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:18,629 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:19:19,522 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:19:23,296 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats
+2024-05-31 03:19:23,487 ERROR   FileStreamThread:1061516 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/singfor7012/StarCraft2_3m/5b0459jy/file_stream
+NoneType: None
+2024-05-31 03:19:24,297 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:19:25,873 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:19:25,873 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:19:25,874 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:19:30,124 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:19:35,125 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:19:40,126 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:19:40,875 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-31 03:19:40,876 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-31 03:19:40,876 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: stop_status
+2024-05-31 03:19:41,387 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:41,387 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:41,388 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:41,388 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:41,388 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:41,388 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:41,388 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:41,388 DEBUG   SenderThread:1061516 [sender.py:send():382] send: history
+2024-05-31 03:19:41,388 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:41,391 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:41,389 DEBUG   SenderThread:1061516 [sender.py:send_request():409] send_request: summary_record
+2024-05-31 03:19:41,391 INFO    SenderThread:1061516 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-05-31 03:19:41,531 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/wandb-summary.json
+2024-05-31 03:19:41,645 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:41,645 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-31 03:19:43,532 INFO    Thread-12 :1061516 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/uosai/Desktop/on-policy/onpolicy/scripts/results/StarCraft2/3m/rmappo/MAPPO/wandb/run-20240531_030022-5b0459jy/files/output.log
+2024-05-31 03:19:45,646 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:19:50,647 DEBUG   HandlerThread:1061516 [handler.py:handle_request():146] handle_request: status_report
+2024-05-31 03:19:51,429 INFO    MainThread:1061516 [internal.py:handle_exit():76] Internal process exited
+2024-05-31 03:19:51,490 INFO    memory    :1061516 [interfaces.py:monitor():140] Process proc.memory.rssMB has exited.
+2024-05-31 03:19:51,490 DEBUG   SystemMonitor:1061516 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-05-31 03:19:51,490 DEBUG   SystemMonitor:1061516 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-05-31 03:19:51,491 DEBUG   SenderThread:1061516 [sender.py:send():382] send: stats

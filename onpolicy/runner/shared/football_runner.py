@@ -41,7 +41,6 @@ class FootballRunner(Runner):
                 rewards = self.reward_function.reward_shaping(episode = episode, episodes = episodes, step = step, obs = torch.flatten(torch.tensor(obs)), rewards = rewards)
                 
                 data = obs, rewards, dones, infos, values, actions, action_log_probs, rnn_states, rnn_states_critic
-                print(infos)
                 # insert data into buffer
 
             episode_loss = self.reward_function.episode_loss

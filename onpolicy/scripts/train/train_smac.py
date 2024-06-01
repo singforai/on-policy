@@ -186,7 +186,7 @@ def main(args):
     if all_args.use_wandb:
         run = wandb.init(
             config=all_args,
-            project=all_args.env_name,
+            project=all_args.env_name + "_" + str(all_args.map_name),
             group = all_args.group_name,
             entity=all_args.user_name,
             notes=socket.gethostname(),

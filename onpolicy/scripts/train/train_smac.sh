@@ -2,7 +2,7 @@
 
 
 # # Original
-# command="python train_smac.py --seed {0} --env_name StarCraft2 --experiment_name Step_cost_Mappo --group_name Step_cost_Mappo --use_reward_shaping --use_shaping_weight"
+# command="python train_smac.py --seed {0} --env_name StarCraft2 --experiment_name Mappo --group_name Mappo_original --use_reward_shaping"
 
 # args_gpu0="--num_gpu 0"
 # args_gpu1="--num_gpu 1"
@@ -13,7 +13,8 @@
 # wait 
 
 #clusterized_reward_shaping
-command="python train_smac.py --seed {0} --env_name StarCraft2 --experiment_name clusterized_shaping_MAPPO_v5 --group_name clusterized_shaping_MAPPO_v5 --num_clusters 5 --use_visual_cluster" 
+command="python train_smac.py --seed {0} --env_name StarCraft2 --experiment_name MAPPO --group_name interval100_50_cluster20 \
+--num_clusters 20 --num_pre_sampling 100 --cluster_update_interval 50"
 
 args_gpu0="--num_gpu 0"
 args_gpu1="--num_gpu 1"

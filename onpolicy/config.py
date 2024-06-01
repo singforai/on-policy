@@ -163,30 +163,49 @@ def get_config():
         help="share_obs에 대해서 clustering을 수행함.",
     )
     parser.add_argument(
-        "--visual_cluster_interval",
-        type = int,
-        default= 200,
-        help="cluster를 시각화하는 간격",
-    )
-    parser.add_argument(
-        "--use_visual_cluster",
-        action = "store_false",
-        default= True,
-        help="cluster를 시각화할 것인가?",
-    )
-    parser.add_argument(
-        "--cluster_update_interval",
-        type = int,
-        default= 1,
-        help="K-means clustering을 업데이트하는 에피소드 간격",
-        
-    )
-    parser.add_argument(
         "--use_reward_shaping",
         action="store_false",
         default=True,
         help="추가적인 Reward_function을 활용할 것인지",
     )
+    parser.add_argument(
+        "--use_pre_sampling",
+        action = "store_false",
+        default = True,
+        help = "훈련없이 샘플링 데이터를 사전에 수집할 것인가? (현재는 항상 True여야 함)"
+    )    
+    parser.add_argument(
+        "--num_pre_sampling",
+        type = int,
+        default = 200,
+        help = "샘플링 데이터를 사전에 수집한다면 몇 step을 수집할 것인가?"
+    )    
+    parser.add_argument(
+        "--use_autoencoder",
+        action = "store_true",
+        default = False,
+        help = "차원 축소를 위해 AutoEncoder를 사용할 것인가?"
+    )
+    parser.add_argument(
+        "--ae_train_epoch",
+        type = int,
+        default = 10000,
+        help = "오토 인코더 학습 Epoch 횟수?"        
+    )
+    parser.add_argument(
+        "--ae_batch_size",
+        type = int,
+        default = 32,
+        help = "오토 인코더 학습 배치 사이즈?"        
+    )
+    parser.add_argument(
+        "--cluster_update_interval",
+        type = int,
+        default = 100,
+        help = "cluster update step interval"        
+    )
+
+
 
     # prepare parameters
     parser.add_argument(
