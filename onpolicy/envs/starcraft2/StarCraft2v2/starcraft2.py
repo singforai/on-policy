@@ -2,9 +2,9 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-from smacv2.env.multiagentenv import MultiAgentEnv
+from onpolicy.envs.starcraft2.multiagentenv import MultiAgentEnv
 
-from smacv2.env.starcraft2.maps import get_map_params
+from onpolicy.envs.starcraft2.smac_maps import get_map_params
 
 
 import atexit

@@ -155,7 +155,6 @@ def get_config():
     """
     parser = argparse.ArgumentParser(description="onpolicy", formatter_class=argparse.RawDescriptionHelpFormatter)
 
-
     parser.add_argument(
         "--num_clusters",
         type = int,
@@ -177,7 +176,7 @@ def get_config():
     parser.add_argument(
         "--num_pre_sampling",
         type = int,
-        default = 200,
+        default = 500,
         help = "샘플링 데이터를 사전에 수집한다면 몇 step을 수집할 것인가?"
     )    
     parser.add_argument(
@@ -195,7 +194,7 @@ def get_config():
     parser.add_argument(
         "--ae_batch_size",
         type = int,
-        default = 32,
+        default = 16,
         help = "오토 인코더 학습 배치 사이즈?"        
     )
     parser.add_argument(
@@ -269,7 +268,7 @@ def get_config():
     )
 
     # env parameters
-    parser.add_argument("--env_name", type=str, default="StarCraft2", help="specify the name of environment", choices= ["Football", "StarCraft2", "StarCraft2v2"])
+    parser.add_argument("--env_name", type=str, default="StarCraft2", help="specify the name of environment", choices= ["Football", "StarCraft2", "StarCraft2v2", "SMACv2"])
     parser.add_argument(
         "--use_obs_instead_of_state",
         action="store_true",

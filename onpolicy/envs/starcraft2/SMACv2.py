@@ -1,4 +1,4 @@
-from smacv2.env.starcraft2.wrapper import StarCraftCapabilityEnvWrapper # original smac v2 environment
+from .StarCraft2v2.wrapper import StarCraftCapabilityEnvWrapper # original smac v2 environment
 import random
 from gym.spaces import Discrete
 import numpy as np

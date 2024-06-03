@@ -7,6 +7,9 @@ import torch.optim as optim
 
 from tqdm import tqdm 
 
+from scipy.spatial.distance import pdist, squareform
+from scipy.stats import pearsonr
+
 class AutoEncoder(nn.Module):
     def __init__(self, len_share_obs):
         super(AutoEncoder, self).__init__()
@@ -41,13 +44,36 @@ class AutoEncoder(nn.Module):
         )
     def forward(self, x):
         latent_vector = self.encoder(x)
+        input_dis_matrix = self.calculate_distance_matrix(x)
         pred_sh_obs = self.decoder(latent_vector)
-        return pred_sh_obs
+        latent_dis_matrix = self.calculate_distance_matrix(latent_vector)
+        correlation = self.calculate_correlation(dist_matrix1 = input_dis_matrix, dist_matrix2 = latent_dis_matrix)
+        return pred_sh_obs, correlation
+    
+    def calculate_distance_matrix(self, x):
+        n = x.size(0)
+        dist_matrix = torch.zeros(n, n, device=x.device)
+        for i in range(n):
+            dist_matrix[i] = torch.norm(x[i] - x, dim=1)
+        return dist_matrix
+    
+    def calculate_correlation(self, dist_matrix1, dist_matrix2):
+        dist_matrix1_flat = dist_matrix1.view(-1)
+        dist_matrix2_flat = dist_matrix2.view(-1)
+        mean1 = torch.mean(dist_matrix1_flat)
+        mean2 = torch.mean(dist_matrix2_flat)
+        var1 = torch.var(dist_matrix1_flat)
+        var2 = torch.var(dist_matrix2_flat)
+        covariance = torch.mean((dist_matrix1_flat - mean1) * (dist_matrix2_flat - mean2))
+        correlation = covariance / torch.sqrt(var1 * var2)
+        return correlation
 
 
 class K_Means_Clustering:
     def __init__(self, num_clusters, device, len_share_obs, use_autoencoder, use_pre_sampling, cluster_update_interval):
         self.device = device
+        
+        self.decay_rate: float = 0.999
 
         self.num_clusters: int = num_clusters
         self.len_share_obs: int = len_share_obs
@@ -55,7 +81,6 @@ class K_Means_Clustering:
 
         self.use_pre_sampling: bool = use_pre_sampling
         self.use_autoencoder: bool = use_autoencoder
-
 
         self.centroids = [None for _ in range(self.num_clusters)]
 
@@ -80,18 +105,23 @@ class K_Means_Clustering:
                     self.centroids[idx] = self.shareobs_storage[next_centroid_idx]
                     break
 
-        self.centroids_max_rewards = [float('-inf') for _ in range(self.num_clusters)]
+        self.centroids_rewards = [0.0 for _ in range(self.num_clusters)]
 
         self.training()
+    
+    def cal_centroid_ewma(self, cluster_idx, point_reward):
+        self.centroids_rewards[cluster_idx] = self.decay_rate*self.centroids_rewards[cluster_idx] + (1-self.decay_rate)*point_reward
     
     def decision_clusters(self):
         self.clusters = [[] for _ in range(self.num_clusters)]
         for point_idx, point in enumerate(self.shareobs_storage):
-            closest_centroid_idx = np.argmin(np.sqrt(np.sum((point-self.centroids)**2, axis=1)))
-            self.clusters[closest_centroid_idx].append(point_idx)
+            cluster_idx = np.argmin(np.sqrt(np.sum((point-self.centroids)**2, axis=1)))
+            self.clusters[cluster_idx].append(point_idx)
 
-            if self.rewards_storage[point_idx] > self.centroids_max_rewards[closest_centroid_idx]:
-                self.centroids_max_rewards[closest_centroid_idx] = self.rewards_storage[point_idx]
+            self.cal_centroid_ewma(
+                cluster_idx = cluster_idx,
+                point_reward = self.rewards_storage[point_idx]
+            )
 
     def cal_new_centroids(self):
         for idx, cluster in enumerate(self.clusters):
@@ -110,12 +140,12 @@ class K_Means_Clustering:
         self.shareobs_storage = []
         self.rewards_storage = []
 
-    def change_rewards(self, rewards, expected_max_rewards):
+    def change_rewards(self, rewards, expected_rewards):
 
-        if rewards[0][0][0] == expected_max_rewards:
-            return rewards
+        if rewards[0][0][0] >= expected_rewards:
+            return rewards 
         else:
-            return rewards - expected_max_rewards
+            return rewards - abs(expected_rewards)
 
     def predict_cluster(self, share_obs, rewards):
         distances = []
@@ -123,16 +153,16 @@ class K_Means_Clustering:
             distances.append(np.sum((share_obs - centroid)**2))
         closest_centroid_idx = torch.argmin(torch.tensor(distances))
 
-        expected_max_rewards = self.centroids_max_rewards[closest_centroid_idx]
+        expected_rewards = self.centroids_rewards[closest_centroid_idx]
 
         shaped_rewards = self.change_rewards(
             rewards = rewards, 
-            expected_max_rewards = expected_max_rewards
+            expected_rewards = expected_rewards
         )
 
         if len(self.shareobs_storage) % self.cluster_update_interval == 0 and len(self.shareobs_storage) != 0:
             self.training()
-        return shaped_rewards
+        return shaped_rewards 
 
 
 class Reward_Function:
@@ -179,7 +209,7 @@ class Reward_Function:
 
         criterion = nn.MSELoss()
         optimizer = torch.optim.Adam(self.AutoEncoder.parameters(), lr=0.01)
-        scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer)
+        scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor = 0.05)
         
         best_val_error = float("inf")
         overfitting_stack = 0
@@ -190,22 +220,25 @@ class Reward_Function:
             for idx in range(0, len(training_data), self.batch_size): 
                 end_idx = min(idx + self.batch_size, len(training_data))
                 mini_batch = torch.tensor(np.array(training_data[idx : end_idx])).to(self.device)
-                output_batch = self.AutoEncoder(mini_batch)
-                loss = criterion(output_batch, mini_batch)
+                output_batch, corr_coef = self.AutoEncoder(mini_batch)
+                loss =  0.1 * (1 - corr_coef) + criterion(output_batch, mini_batch)
                 optimizer.zero_grad()
                 loss.backward()
                 train_loss += loss.item()
+                
                 optimizer.step()
-
+            
             with torch.no_grad():
                 self.AutoEncoder.eval()
-                val_loss = 0
+                val_loss: float = 0
+                coef_loss: float = 0.0
                 for idx in range(0, len(validation_data), self.batch_size):
                     end_idx = min(idx + self.batch_size, len(validation_data))
                     mini_batch = torch.tensor(np.array(validation_data[idx: end_idx]), dtype=torch.float32).to(self.device)
-                    output_batch = self.AutoEncoder(mini_batch)
-                    loss = criterion(output_batch, mini_batch)
+                    output_batch, corr_coef = self.AutoEncoder(mini_batch)
+                    loss =  0.1 * (1 - corr_coef) + criterion(output_batch, mini_batch)
                     val_loss += loss.item()
+                    coef_loss += (1 - corr_coef).item()
                 if best_val_error > val_loss:
                     best_val_error = val_loss
                     best_autoencoder = self.AutoEncoder.state_dict()
@@ -213,10 +246,10 @@ class Reward_Function:
                 else:
                     overfitting_stack += 1
 
-                if overfitting_stack > 200 or epoch == (self.train_epoch-1):
+                if overfitting_stack > 500 or epoch == (self.train_epoch-1):
                     import os.path as osp
                     torch.save(best_autoencoder, osp.join(osp.dirname(__file__),f'auto_encoder/best_autoencoder_{self.seed}.pth'))
                     print("[ encoder 생성 완료 ]")
                     break
             scheduler.step(train_loss)
-            pbar.desc = f"Autoencoder val loss: {best_val_error}"#
+            pbar.desc = f"Val loss: {best_val_error:.4f} Coef loss: {coef_loss:.4f}"
